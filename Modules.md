@@ -250,7 +250,7 @@ section.
 `      "citation": ""`  
 `  }`
 
-### StopPipeline
+# StopPipeline
 
 The StopPipeline module is a module which controls the behavior of
 tomoBEAR. It allows to stop tomoBEAR after some processing step to
@@ -265,7 +265,7 @@ need to be optimized.
 `       "execution_method": "control"`  
 `   }`
 
-### MetaData
+# MetaData
 
 The MetaData module collects descriptive statistics such as min, max,
 mean, std from the raw data.
