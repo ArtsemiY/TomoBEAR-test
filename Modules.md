@@ -1,10 +1,8 @@
-# Modules
-
 Following you can find descriptions of the functionality of the modules
 and their parameters which can be setup in the json file in their
 corresponding block.
 
-### General
+# General
 
 The general section is not a module but a section where all the general
 parameters regarding the processing and the environment can be found.
@@ -290,7 +288,7 @@ mean, std from the raw data.
 `       "citation": ""`  
 `   }`
 
-### SortFiles
+# SortFiles
 
 The SortFiles module sorts the raw files on a tomogram basis and links
 them to their corresponding folders for further processing.
@@ -313,7 +311,7 @@ them to their corresponding folders for further processing.
 `       "citation": ""`  
 `   }`
 
-### MotionCor2
+# MotionCor2
 
 The MotionCor2 module uses as the module's name suggests MotionCor2 to
 correct for the sample movement in a given projection which is basically
@@ -402,7 +400,7 @@ archive of MotionCor2.
 `       "doi": ""`  
 `   }`
 
-### CreateStacks
+# CreateStacks
 
 The CreateStacks module creates the stacks and normalizes them. There
 are two options for normalization. The default normalization scheme is
@@ -441,7 +439,7 @@ frame-count is different.
 `       "doi": ""`  
 `   }`
 
-### DynamoTiltSeriesAlignment
+# DynamoTiltSeriesAlignment
 
 The DynamoTiltSeriesAlignment module is using the tilt stacks alignment
 algorithm from dynamo which is the best available algorithm for
@@ -583,7 +581,7 @@ be done in the json configuration file.
 `       "doi": ""`  
 `   }`
 
-### DynamoCleanStacks
+# DynamoCleanStacks
 
 The DynamoCleanStacks module can be run after the
 DynamoTiltSeriesAlignment to automatically clean up the tilt stacks. For
@@ -609,7 +607,7 @@ The others are then removed from the tilt stacks for further processing.
 `       "doi": ""`  
 `   }`
 
-### BatchRunTomo
+# BatchRunTomo
 
 The BatchRunTomo module is the most versatile one as it can be setup to
 fulfill all the steps batchruntomo normally can do:
@@ -777,7 +775,7 @@ tomoBEAR and should not be replaced or changed by the user.
 `       "doi": ""`  
 `   }`
 
-### GCTFCtfphaseflipCTFCorrection
+# GCTFCtfphaseflipCTFCorrection
 
 The GCTFCtfphaseflipCTFCorrection module is detecting the CTF for the
 tomograms which are reconstructed for template matching or particle
@@ -841,7 +839,7 @@ cropping.
 `       "doi": ""`  
 `   }`
 
-### BinStacks
+# BinStacks
 
 The BinStacks module is used for binning the stacks to be able to
 reconstruct them with the Reconstruct module which should be used after
@@ -877,7 +875,7 @@ your stacks are binned.
 `       "doi": ""`  
 `   }`
 
-### Reconstruct
+# Reconstruct
 
 The Reconstruct module should be used after you binned the tilt stacks
 with the BinStacks module or used aligned tilt stack binning option
@@ -911,7 +909,7 @@ set up the Reconstruct module properly.
 `       "doi": ""`  
 `   }`
 
-### DynamoImportTomograms
+# DynamoImportTomograms
 
 The DynamoImportTomograms module generates a dynamo catalogue for you
 and inputs the tomograms to that catalogue. After that you can call the
@@ -936,7 +934,7 @@ or pick in them particles by hand.
 `       "doi": ""`  
 `   }`
 
-### EMDTemplateGeneration
+# EMDTemplateGeneration
 
 The EMDTemplateGeneration module is used to automatically download a
 template which is further down scaled to match your desired template
@@ -963,7 +961,7 @@ matching is executed.
 `       "citation": ""`  
 `   }`
 
-### TemplateGenerationFromFile
+# TemplateGenerationFromFile
 
 `   "TemplateGenerationFromFile": {`  
 `       "execution_method": "once",`  
@@ -983,7 +981,7 @@ matching is executed.
 `       "citation": ""`  
 `   }`
 
-### DynamoTemplateMatching
+# DynamoTemplateMatching
 
 The DynamoTemplateMatching module implements basically the template
 matching from dynamo but on a GPU. Because of the GPU usage the whole
@@ -1014,7 +1012,7 @@ implementation of dynamo.
 `       "citation": ""`  
 `   }`
 
-### TemplateMatchingPostProcessing
+# TemplateMatchingPostProcessing
 
 `   "TemplateMatchingPostProcessing": {`  
 `       "execution_method": "once",`  
@@ -1046,7 +1044,7 @@ implementation of dynamo.
 `       "citation": ""`  
 `   }`
 
-### DynamoAlignmentProject
+# DynamoAlignmentProject
 
 `   "DynamoAlignmentProject": {`  
 `       "checkpoint_module": true,`  
