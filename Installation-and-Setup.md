@@ -1,10 +1,10 @@
 # Prerequisites
 
-This software was tested on a machine with following properties:
+This software was developed and tested on a machine with the following properties:
 
--   OS: CentOS 7
--   GPU: at least one gpu with a minimum 10GB of RAM
--   RAM: 189GB
+-   OS: CentOS 7 / Ubuntu 21.04
+-   GPU: at least one gpu with a minimum of 8GB of VRAM
+-   RAM: at least 16GB of RAM, more is better
 -   HDD/SDD: enough storage to store intermediate data, depends on size
     of data
 
