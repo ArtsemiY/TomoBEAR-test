@@ -12,6 +12,10 @@ This software was developed and tested on a machine with the following propertie
 
 ## Additional Software
 
+### CUDA
+
+For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed.
+
 ### MotionCor2
 
 Head to the
