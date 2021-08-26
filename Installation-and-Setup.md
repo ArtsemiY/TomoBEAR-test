@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 
 This software was tested on a machine with following properties:
 
@@ -8,11 +8,11 @@ This software was tested on a machine with following properties:
 -   HDD/SDD: enough storage to store intermediate data, depends on size
     of data
 
-## Setup
+# Setup
 
-### Additional Software
+## Additional Software
 
-#### MotionCor2
+### MotionCor2
 
 Head to the
 [MotionCor2](https://docs.google.com/forms/d/e/1FAIpQLSfAQm5MA81qTx90W9JL6ClzSrM77tytsvyyHh1ZZWrFByhmfQ/viewform)
@@ -21,20 +21,20 @@ MotionCor2 version greater than 1.4.0 is desired.
 
 -   Alternative download [link](https://emcore.ucsf.edu/ucsf-software).
 
-#### Gctf
+### Gctf
 
 Head to the
 [Gctf](https://www2.mrc-lmb.cam.ac.uk/research/locally-developed-software/zhang-software/)
 downlaod page and download Gctf version 1.06. Gctf version 1.18 could
 also work but is not tested.
 
-#### IMOD
+### IMOD
 
 Head to the
 [IMOD](https://bio3d.colorado.edu/ftp/latestIMOD/RHEL7-64_CUDA8.0)
 download page and get the IMOD version 4.10.42.
 
-### Software Installation
+## Software Installation
 
 Please follow the instructions for all the software packages you
 downloaded. At best you will find the paths to the executables of the
