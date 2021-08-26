@@ -14,7 +14,13 @@ This software was developed and tested on a machine with the following propertie
 
 ### CUDA
 
-For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed.
+For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
+
+To install CUDA you can use the package manager of your OS. For that you will probably need to add the repositories with CUDA for your specific OS. 
+
+#### CentOS 7
+
+A description of how to install a specific CUDA version for CentOS 7 is available [here](https://linuxconfig.org/how-to-install-nvidia-cuda-toolkit-on-centos-7-linux).
 
 ### MotionCor2
 
