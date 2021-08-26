@@ -20,7 +20,7 @@ To install CUDA you can use the package manager of your OS. For that you will pr
 
 #### CentOS 7
 
-A description of how to install a specific CUDA version for CentOS 7 is available [here](https://linuxconfig.org/how-to-install-nvidia-cuda-toolkit-on-centos-7-linux).
+A description of how to install a specific CUDA version for CentOS 7 is available [here](https://linuxconfig.org/how-to-install-nvidia-cuda-toolkit-on-centos-7-linux). Please follow the instructions there. To get other CUDA versions you will need to replace the rpm `cuda-repo-rhel7-10.0.130-1.x86_64.rpm` with a rpm from [here](https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/) you need.
 
 ### MotionCor2
 
