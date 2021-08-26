@@ -1,4 +1,4 @@
-## Modules
+# Modules
 
 Following you can find descriptions of the functionality of the modules
 and their parameters which can be setup in the json file in their
