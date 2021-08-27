@@ -1,11 +1,11 @@
 # Prerequisites
 
-This software was developed and tested on a machine with the following properties:
+This software was developed and tested on machines with the following properties:
 
 -   OS: CentOS 7 / Ubuntu 21.04
--   GPU: at least one gpu with a minimum of 8GB of VRAM
+-   GPU: at least one gpu with a minimum of 8GB of VRAM, more is better
 -   RAM: at least 16GB of RAM, more is better
--   HDD/SDD: enough storage to store intermediate data, depends on size
+-   HDD/SDD: enough storage to store data, intermediates and results, depends on size
     of data
 
 # Setup
@@ -16,7 +16,7 @@ This software was developed and tested on a machine with the following propertie
 
 For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
 
-To install CUDA you can use the package manager of your OS or the module system in your facility.
+To install CUDA you can use the package manager of your OS install it manually or just use the module system of your facility if you employ one.
 
 #### Module System 
 
