@@ -2,7 +2,12 @@ Welcome to the tomoBEAR wiki!
 
 TomoBEAR a software package specialized for cryo electron tomography which is written in MATLAB and interfaces standardized tools for cryo electron tomography. With tomoBEAR you can easily process tomographic data from the raw tilt stacks which are acquired by an electron microscope to the biological structure of interest.
 
-TomoBEAR is designed to operate on a data set in parallel where it's possible and that the user has minimal intervention and doesn't need to learn all the different software packages (MotionCor2, IMOD, Gctf, Dynamo) to be able to process cryo electron tomography data. We tried to come up with a set of predefined defaults which should fit many projects in the cryo electron tomography regime. However if some parameters need to be tweaked for specific projects to achieve best results you are free to do so.
+TomoBEAR is designed to operate on a data set in parallel where it is possible and that the user has minimal intervention and doesn't need to learn all the different software packages (MotionCor2, IMOD, Gctf, Dynamo) to be able to process cryo electron tomography data. We tried to come up with a set of predefined defaults which should fit many projects in the cryo electron tomography regime. However if some parameters need to be tweaked for specific projects to achieve best results you are free to do so.
+
+There are various advantages to use tomoBEAR:
+* It is based on JSON configuration files which can be easily shared between others so that they can validate or improve your results
+* You are able to look at the intermediates optimize parameters and rerun the steps to achieve optimal results
+* You are never locked to the tomoBEAR processing pipeline and can easily breakout at different steps to other software tools you prefer
 
 In the following chapters we will describe...
 
