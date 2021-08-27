@@ -39,14 +39,7 @@ Everything you need to get tomoBEAR on your machine is to change to some folder 
 
 As tomoBEAR is also wrapping standardized tools to fulfill some of the processing steps these need to be installed and executable. The advantage of such an Best of Breed approach is that you can profit of developments in algorithms in these tools and you can use them in the pipeline without any changes to the code at best.
 
-### CUDA
-
-For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
-
-To install CUDA you can use the package manager of your OS install it manually or just use the module system of your facility if you employ one.
-
-
-#### Module System 
+### Module System 
 
 If you are working in a cryo electron microscopy facility and employ a cluster with a module system where all the needed software is already deployed as modules it is fairly easy to setup tomoBEAR. If not all the software packages are available as modules you have two possibilities.
 
@@ -58,9 +51,15 @@ If all the software is available as modules you need to head to the `defults.jso
 
 As for the other software packages you can add the required CUDA versions also to the field modules.
 
-#### Manual Installation
+### Manual Installation
 
 The easiest way for the manual installation is to add the repositories with CUDA to your specific OS package manager. That is yum in CentOS and apt or apt-get in Ubuntu. The other way is a manual installation from the executables which are available from the [NVIDIA homepage](https://developer.nvidia.com/cuda-toolkit-archive). 
+
+#### CUDA
+
+For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
+
+To install CUDA you can use the package manager of your OS install it manually or just use the module system of your facility if you employ one.
 
 ##### CentOS 7
 
@@ -72,7 +71,7 @@ You need to repeat the steps multiple times until you have all the needed CUDA v
 
 To get the newest CUDA on an Ubuntu system the easiest way is to install it via graphic
 
-### MotionCor2
+#### MotionCor2
 
 Head to the
 [MotionCor2](https://docs.google.com/forms/d/e/1FAIpQLSfAQm5MA81qTx90W9JL6ClzSrM77tytsvyyHh1ZZWrFByhmfQ/viewform)
@@ -81,20 +80,20 @@ MotionCor2 version greater than 1.4.0 is desired.
 
 -   Alternative download [link](https://emcore.ucsf.edu/ucsf-software).
 
-### Gctf
+#### Gctf
 
 Head to the
 [Gctf](https://www2.mrc-lmb.cam.ac.uk/research/locally-developed-software/zhang-software/)
 downlaod page and download Gctf version 1.06. Gctf version 1.18 could
 also work but is not tested.
 
-### IMOD
+#### IMOD
 
 Head to the
 [IMOD](https://bio3d.colorado.edu/ftp/latestIMOD/RHEL7-64_CUDA8.0)
 download page and get the IMOD version 4.10.42.
 
-## Software Installation
+### Software Installation
 
 Please follow the instructions for all the software packages you
 downloaded. At best you will find the paths to the executables of the
@@ -105,8 +104,8 @@ is not the case you need to adjust the paths to the executables in the
 The keys where the values needs to be adjusted can be found in the
 general section of the json file and are the following ones:
 
--   "motion_correction_command": "/path/to/MotionCor2_1.4.0_Cuda102"
--   "ctf_correction_command": "/path/to/Gctf-v1.06_sm_30_cu8.0_x86_64"
+* `"motion_correction_command": "/path/to/MotionCor2_1.4.0_Cuda102"`
+* `"ctf_correction_command": "/path/to/Gctf-v1.06_sm_30_cu8.0_x86_64"`
 
 If you don't have the software in your path you can provide the full
 path to the executable as the value. Also if you downloaded a newer
@@ -118,5 +117,5 @@ to try executables compiled for older CUDA libraries if you have newer
 ones installed.
 
 If you install IMOD the normal way then IMOD should be already in your
-PATH variable and therefore callable from everywhere. This is the only
-way supported by TomoBEAR.
+`PATH` variable and therefore callable from everywhere. This is the only
+way supported by tomoBEAR.
