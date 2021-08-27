@@ -6,8 +6,9 @@ TomoBEAR is designed to operate on a data set in parallel where it is possible a
 
 There are various advantages to use tomoBEAR:
 * It is based on JSON configuration files which can be easily shared between others so that they can validate or improve your results
+* It was developed and tested on well known datasets to achieve same or better results as with manual processing
 * You are able to look at the intermediates optimize parameters and rerun the steps to achieve optimal results
-* You are never locked to the tomoBEAR processing pipeline and can easily breakout at different steps to other software tools you prefer
+* You are never locked to the tomoBEAR processing pipeline and can easily breakout at various steps to other software tools you prefer
 
 In the following chapters we will describe...
 
