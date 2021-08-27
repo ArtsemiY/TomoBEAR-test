@@ -2,11 +2,21 @@
 
 This software was developed and tested on machines with the following properties:
 
--   OS: CentOS 7 / Ubuntu 21.04
--   GPU: at least one gpu with a minimum of 8GB of VRAM, more is better
--   RAM: at least 16GB of RAM, more is better
--   HDD/SDD: enough storage to store data, intermediates and results, depends on size
-    of data
+-   Operating System (OS): CentOS 7 / Ubuntu 21.04
+
+Other Linux-based OSs should also be possible as long as MATLAB and all the other needed tools are runnable.
+
+-   Graphics Processing Unit (GPU): at least one GPU with a minimum of 8GB of Video Random Access Memory (VRAM)
+
+It is better to have more GPUs with possibly greater amount of VRAM. With more GPUs you can process more data units in parallel. With more VRAM you can fit bigger tilt stacks or tomograms in memory especially in template matching.
+
+-   Random Access Memory (RAM): at least 16GB of RAM
+
+The more RAM you have the better. With more RAM you can run more parallel processes to process to process your data faster. This depends on the execution method of the modules.
+
+-   Hard Disk Drive (HDD) / Solid State Disk (SSD): depends on size of data
+
+You need enough storage to store your data and all the intermediate data and results. Although it is possible to clean up the intermediate data during processing you will still need temporarily enough storage to store it until it can be deleted. The amount of needed storage is larger when you have more processes running in parallel.
 
 # Setup
 
