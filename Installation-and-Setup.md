@@ -16,11 +16,26 @@ This software was developed and tested on a machine with the following propertie
 
 For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
 
-To install CUDA you can use the package manager of your OS. For that you will probably need to add the repositories with CUDA for your specific OS. 
+To install CUDA you can use the package manager of your OS or the module system in your facility.
 
-#### CentOS 7
+#### Module System 
 
-A description of how to install a specific CUDA version for CentOS 7 is available [here](https://linuxconfig.org/how-to-install-nvidia-cuda-toolkit-on-centos-7-linux). Please follow the instructions there. To get other CUDA versions you will need to replace the rpm `cuda-repo-rhel7-10.0.130-1.x86_64.rpm` with a rpm from [here](https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/) you need.
+
+
+
+#### Manual Installation
+
+The easiest way for the manual installation is to add the repositories with CUDA to your specific OS package manager. That is yum in CentOS and apt or apt-get in Ubuntu. The other way is a manual installation from the executables which are available from the [NVIDIA homepage](https://developer.nvidia.com/cuda-toolkit-archive). 
+
+##### CentOS 7
+
+A description of how to install a specific CUDA version for CentOS 7 is available [here](https://linuxconfig.org/how-to-install-nvidia-cuda-toolkit-on-centos-7-linux). Please follow the instructions there. To get other CUDA versions you will need to replace the rpm `cuda-repo-rhel7-10.0.130-1.x86_64.rpm` with a suitable rpm from [here](https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/).
+
+You need to repeat the steps multiple times until you have all the needed CUDA versions in ypur system installed to be able to run all the tools which are mentioned below.
+
+##### Ubuntu 21.04
+
+To get the newest CUDA on an Ubuntu system the easiest way is to install it via graphic
 
 ### MotionCor2
 
