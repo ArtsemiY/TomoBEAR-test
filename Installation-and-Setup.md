@@ -34,8 +34,13 @@ To install CUDA you can use the package manager of your OS install it manually o
 
 #### Module System 
 
+If you are working in a cryo electron microscopy facility and employ a cluster with a module system where all the needed software is already deployed as modules it is fairly easy to setup tomoBEAR. If not all the software packages are available as modules you have two possibilities.
 
+1. The first and probably the easiest possibility for inexperienced users is to ask the administrator or some responsible person for the module system to introduce the needed software as modules
 
+2. The second and probably faster possibility is to install the software on your own in your home folder if you don't have root permissions and put it your PATH variable or adjust the defaults.json so that the variables to tools contain the full path. 
+
+If all the software is available as modules you need to head to the defults.json file and find the entry `"modules": []` just replace it with `"modules": ["IMOD", "Gctf", "MotionCor2"]`
 
 #### Manual Installation
 
