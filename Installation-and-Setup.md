@@ -20,6 +20,7 @@ You need enough storage to store your data and all the intermediate data and res
 
 # Setup
 
+There are two ways to operate tomoBEAR. The first way is to use it directly from MATLAB. The second way is to use a standalone executable which is available precompiled or can be compiled on your own. For both working methods you have to install the additional software mentioned below in the chapter of the same name.
 
 ## Additional Software
 
