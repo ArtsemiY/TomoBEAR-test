@@ -20,7 +20,10 @@ You need enough storage to store your data and all the intermediate data and res
 
 # Setup
 
+
 ## Additional Software
+
+As tomoBEAR is also wrapping standardized tools to fulfill some of the processing steps these need to be installed and executable. The advantage of such an Best of Breed approach is that you can profit of developments in algorithms in these tools and you can use them in the pipeline without any changes to the code at best.
 
 ### CUDA
 
