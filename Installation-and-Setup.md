@@ -47,7 +47,7 @@ if it is available in your systems `PATH` variable.
 
 ## Standalone
 
-TomoBEAR can also be used as a standalone application for that you will need the standalone package itself with all the additional software which is mentioned below installed. Additionally you will need the MCR (MATLAB Compiled Runtime) from [here](https://www.mathworks.com/products/compiler/matlab-runtime.html). Please get the newest MCR to be able to run tomoBEAR.
+TomoBEAR can also be used as a standalone application for that you will need the standalone package itself which can be found [here](https://github.com/KudryashevLab/tomoBEAR/releases) with all the additional software which is mentioned below installed. Additionally you will need the MCR (MATLAB Compiled Runtime) from [here](https://www.mathworks.com/products/compiler/matlab-runtime.html). There you need to get the newest MCR 2021a to be able to run tomoBEAR. 
 
 ## Additional Software
 
