@@ -93,13 +93,13 @@ Head to the
 [IMOD](https://bio3d.colorado.edu/ftp/latestIMOD/RHEL7-64_CUDA8.0)
 download page and get the IMOD version 4.10.42.
 
-### Software Installation
+#### Software Installation
 
 Please follow the instructions for all the software packages you
 downloaded. At best you will find the paths to the executables of the
-downlaoded software in your PATH variable of your linux system. If this
+downlaoded software in your `PATH` variable of your Linux system. If this
 is not the case you need to adjust the paths to the executables in the
-"defaults.json" file which you can find in the "configurations" folder.
+`defaults.json` file which you can find in the folder `configurations`.
 
 The keys where the values needs to be adjusted can be found in the
 general section of the json file and are the following ones:
