@@ -22,16 +22,28 @@ You need enough storage to store your data and all the intermediate data and res
 
 There are two ways to operate tomoBEAR. 
 
-* The first way is to use it directly from MATLAB. 
-* The second way is to use a standalone executable which is available precompiled or can be compiled on your own. 
+* The first way is to use it directly from MATLAB
+* The second way is to use a standalone executable which is available precompiled or can be compiled on your own
 
 For both methods of operation you have to install the additional software mentioned below in the chapter of the same name.
 
 ## MATLAB
 
-If you want to run on a local machine then it is advised to run tomoBEAR from within MATLAB. This way you also don't need to download and install the MATLAB Compiled Runtime (MCR).
+If you want to run on a local machine then it is advised to run tomoBEAR from within MATLAB. This way you also don't need to download and install the MATLAB Compiled Runtime (MCR) if it is not already installed in your facility.
 
-Everything you need to get tomoBEAR on your machine is to change to some folder where you want to have tomoBEAR and execute the following command `git clone https://github.com/KudryashevLab/tomoBEAR.git`. After that change to the folder tomoBEAR with `cd tomoBEAR` and start MATLAB with the command `matlab` if it is available in your systems `PATH` variable.
+Everything you need to get tomoBEAR on your machine is to change to some folder where you want to have tomoBEAR and execute the following command 
+
+* `git clone https://github.com/KudryashevLab/tomoBEAR.git`. 
+
+After that change to the folder tomoBEAR with 
+
+* `cd tomoBEAR`
+
+and start MATLAB with the command 
+
+* `matlab`
+
+if it is available in your systems `PATH` variable.
 
 ## Standalone
 
