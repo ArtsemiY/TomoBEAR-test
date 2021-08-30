@@ -34,7 +34,21 @@ There are various advantages to use tomoBEAR:
 * Improved Dynamo template matching functionality
   * 10x - 14x speedup leveraging the GPU compared to 28 CPUs achieving 18x speedup
 * SUSAN is integrated
-
+* Cleanup functionality
+* TemplateMatchingPostprocessing
+  * Extraction of particles and conversion to dboxes now possible
+  * Modification of particles box size is possible a factor or the absolute box size can be used as input
+* DynamoAlignmentProject
+  * MRA
+    * Alignment to a predefined number of replicated templates with gaussian noise added
+    * Alignment to a template class plus a predefined number of noise classes
+  * Extraction of particles and conversion to dboxes now possible
+  * Extraction of particles with SUSAN and conversion to dboxes now possible
+  * Forcing of using SUSAN is also possible
+    * BinStacks module with appropriate binning levels should be run upfront
+  * Modification of particles box size is possible, as input can be used a factor, the absolute box size can be used as input
+* Introduced presorting for single numbered tilt series data (as in Wenbo’s case of published Ryanodine receptor data)
+* Automated exclusion of bad tilts in reconstructions based on refined fiducial file from BatchRunTomo module
 
 In the following chapters we will describe...
 
