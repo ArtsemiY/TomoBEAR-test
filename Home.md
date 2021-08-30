@@ -18,25 +18,22 @@ There are various advantages to use tomoBEAR:
   * misnumbered tilt images due to SerialEM crashes, based on timestamps
   * different naming conventions
   * EERs, MRCs and TIFs from K2 and K3
- * duplicated projections due to tracking issues (first, last, keep)
+  * duplicated projections due to tracking issues (first, last, keep)
 * Restarting / resuming is possible (e.g. in case of errors, wrong configuration)
-* * Checkpoints are created after every processing step of a tilt series or tomogram
+  * Checkpoints are created after every processing step of a tilt series or tomogram
 * It is based on JSON configuration files which can be easily shared between others so that they can validate or improve your results
 * It was developed and tested on well known datasets to achieve same or better results as with manual processing
 * You are able to look at the intermediates optimize parameters and rerun the steps to achieve optimal results
 * You are never locked to the tomoBEAR processing pipeline and can easily breakout at various steps to other software tools you prefer
-
-
-Class based modules for better maintainability
-Uses links where possible
-Clean up functionality to save storage
-Tomograms to be processed can be limited to process only a subset
-Uses Dynamo tilt-series alignment but injects the fiducial positions to IMOD for projection estimation
-Fiducial positions can be further refined
-Post-processing routines for particle extraction
-Improved Dynamo template matching functionality
-10x - 14x speedup levaraging the GPU compared to 28 CPUs achieving 18x speedup
-SUSAN is integrated
+* Uses links where possible
+* Clean up functionality to save storage
+* Tomograms to be processed can be limited to process only a subset
+* Uses Dynamo tilt-series alignment but injects the fiducial positions to IMOD for projection estimation
+* Fiducial positions can be manualy further refined
+* Post-processing routines for particle extraction
+* Improved Dynamo template matching functionality
+  * 10x - 14x speedup leveraging the GPU compared to 28 CPUs achieving 18x speedup
+* SUSAN is integrated
 
 
 In the following chapters we will describe...
