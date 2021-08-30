@@ -101,6 +101,14 @@ You need to repeat the steps multiple times until you have all the needed CUDA v
 
 To get the newest CUDA on an Ubuntu system the easiest way is to install it via graphic
 
+#### Dynamo
+
+For the non standalone version of tomoBEAR you need a Dynamo version with tilt stack alignment capabilities. The newest version can be downloaded from here.
+
+To minimize the dependencies on different CUDA versions it is advised to recompile the CUDA kernel for averaging with the newest CUDA version which is at best already available on your machine. If not please revise the chapter CUDA on this page.
+
+To recompile the kernel you just need to the location where dynamo was extracted and access the folder ´cuda´ inside. There you will find a file called ´makefile´ which you need to open and modify the second line containing the variable ´CUDA_ROOT=´. Please put in there the path to your most recent CUDA release available on the system.
+
 #### MotionCor2
 
 Head to the
