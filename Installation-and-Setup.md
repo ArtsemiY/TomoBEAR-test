@@ -118,8 +118,8 @@ To recompile the kernel you just need to the location where dynamo was extracted
 
 To recompile just execute the following two commands:
 
-* ´make clean´
-* ´make´
+* `make clean`
+* `make`
 
 #### MotionCor2
 
