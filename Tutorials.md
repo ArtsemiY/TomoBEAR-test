@@ -40,7 +40,7 @@ First you need to show tomoBEAR the path to the data
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
 
-`{  
+`{   
     "general": {  
         "project_name": "Ribosome",  
         "project_description": "Ribosome EMPIAR 10064",  
