@@ -17,9 +17,9 @@ Because of such circumstances which sometimes occur tomoBEAR is able to inject t
 
 If you have already cloned the [tomoBEAR github repository](https://github.com/KudryashevLab/tomoBEAR) to your local machine you can find in the configurations folder a file called `ribosome_empiar_10064_dynamo.json`. This file describes the processing pipeline which should be setup by tomoBEAR to process this data set.
 
-The following paragraphs will explain the changes you need to do to the JSON file to be able to run tomoBEAR on your local machine. In the end of this chapter the whole JSON file is shown.
+The following paragraphs will explain the variables contained in the JSON file and the needed changes to be able to run tomoBEAR on your local machine. In the end of this chapter the whole JSON file is shown.
 
-First you need to show tomoBEAR the path to the data
+First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder.
 
 `  "general": {`  
 `      "project_name": "Ribosome",`  
