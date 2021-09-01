@@ -22,7 +22,7 @@ The following paragraphs will explain the changes you need to do to the JSON fil
 First you need to show tomoBEAR the path to the data
 
 `"general": {`  
-`    "project_name": "Ribosome",`  
+`      "project_name": "Ribosome",`  
 `    "project_description": "Ribosome EMPIAR 10064",`  
 `    "data_path": "/path/to/ribosome/data/*.mrc",`  
 `    "processing_path": "/path/to/processing/folder",`  
