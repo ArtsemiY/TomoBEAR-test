@@ -19,6 +19,6 @@ If you have already cloned the [tomoBEAR github repository](https://github.com/K
 
 The following paragraphs will explain the changes you need to do to the file to be able to run tomoBEAR on your local machine
 
-# HIV (EMPIAR-10164)
+# HIV1 (EMPIAR-10164)
 
 First you need to get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10164/).
