@@ -154,8 +154,10 @@ is not the case you need to adjust the paths to the executables in the
 The keys where the values needs to be adjusted can be found in the
 general section of the json file and are the following ones:
 
-* `"motion_correction_command": "/path/to/MotionCor2_1.4.0_Cuda102"`
-* `"ctf_correction_command": "/path/to/Gctf-v1.06_sm_30_cu8.0_x86_64"`
+* `"pipeline_location": ""`
+* `"motion_correction_command": ""`
+* `"ctf_correction_command": ""`
+* `"dynamo_path": ""`
 
 If you don't have the software in your path you can provide the full
 path to the executable as the value. Also if you downloaded a newer
