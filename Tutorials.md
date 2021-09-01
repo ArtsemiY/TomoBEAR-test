@@ -11,6 +11,9 @@ After downloading the data extract it in a folder of your choice. One thing one 
 * the pixel size is not in the header
 * the tilt angles are not provided
 
+Because of such circumstances which sometimes occur tomoBEAR is able to inject this data along with the JSON which describes the processing pipeline.
+
+If you have already cloned the github repository of tomoBEAR to your local machine you can find in the configurations folder a file called `ribosome_empiar_10064_dynamo.json`. This file describes the processing pipeline which should be setup by tomoBEAR to process this data set.
 
 
 # HIV (EMPIAR-10164)
