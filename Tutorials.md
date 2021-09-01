@@ -21,6 +21,8 @@ The following paragraphs will explain the variables contained in the JSON file a
 
 First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder.
 
+To run the tomoBEAR on the Ribosome data set. 
+
 `  "general": {`  
 `      "project_name": "Ribosome",`  
 `      "project_description": "Ribosome EMPIAR 10064",`  
