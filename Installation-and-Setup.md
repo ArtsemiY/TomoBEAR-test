@@ -46,11 +46,15 @@ Inside of the tomoBEAR folder you will find a configurations folder in which the
 * `"ctf_correction_command": ""` put in the double quotes the executable name of Gctf or the full path (with the executable name)
 * `"dynamo_path": ""` put in the double quotes the path to your dynamo folder
 
-and start MATLAB with the command 
+If you use the Linux module system please insert the module names which need to be loaded to make all the necessary software available and working in the following variable in the general section
+
+* `"modules": ["IMOD_module", "Gctf_module", "MotionCor2_module", "CUDA_module_1", "CUDA_module_2"]`
+
+Afterwards start MATLAB with the command
 
 * `./run_matlab.sh`
 
-if MATLAB in your systems `PATH` variable.
+if MATLAB is in your systems `PATH` variable.
 
 ## Standalone
 
