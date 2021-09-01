@@ -39,6 +39,13 @@ After that change to the folder tomoBEAR with
 
 * `cd tomoBEAR`
 
+Inside of the tomoBEAR folder you will find a configurations folder in which the file `defaults.json` can be found. Open the file `defaults.json` and adjust the following variables inside the general section
+
+* `"pipeline_location": ""` put in the double quotes the location of tomoBEAR
+* `"motion_correction_command": ""` put in the double quotes the executable name of MotionCor2 or the full path (with the executable name)
+* `"ctf_correction_command": ""` put in the double quotes the executable name of Gctf or the full path (with the executable name)
+* `"dynamo_path": ""` put in the double quotes the path to your dynamo folder
+
 and start MATLAB with the command 
 
 * `matlab`
