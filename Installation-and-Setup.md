@@ -48,9 +48,9 @@ Inside of the tomoBEAR folder you will find a configurations folder in which the
 
 and start MATLAB with the command 
 
-* `matlab`
+* `./run_matlab.sh`
 
-if it is available in your systems `PATH` variable.
+if MATLAB in your systems `PATH` variable.
 
 ## Standalone
 
