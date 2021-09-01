@@ -17,7 +17,7 @@ If you have already cloned the [tomoBEAR github repository](https://github.com/K
 
 
 
-The following paragraphs will explain the changes you need to do to the file to be able to run tomoBEAR on your local machine
+The following paragraphs will explain the changes you need to do to the JSON file to be able to run tomoBEAR on your local machine.
 
 # HIV1 (EMPIAR-10164)
 
