@@ -1,4 +1,4 @@
-This page contains tomoBEAR tutorials which should showcase the capabilities of the processing pipeline.
+This page contains tomoBEAR tutorials which should showcase the capabilities of the processing pipeline. These tutorials assume that you have already cloned the [tomoBEAR github repository](https://github.com/KudryashevLab/tomoBEAR), installed all the required software ans setup tomoBEAR.
 
 # Ribosome (EMPIAR-10064)
 
@@ -13,8 +13,11 @@ After downloading the data extract it in a folder of your choice. One thing one 
 
 Because of such circumstances which sometimes occur tomoBEAR is able to inject this data along with the JSON which describes the processing pipeline.
 
-If you have already cloned the github repository of tomoBEAR to your local machine you can find in the configurations folder a file called `ribosome_empiar_10064_dynamo.json`. This file describes the processing pipeline which should be setup by tomoBEAR to process this data set.
+If you have already cloned the [tomoBEAR github repository](https://github.com/KudryashevLab/tomoBEAR) to your local machine you can find in the configurations folder a file called `ribosome_empiar_10064_dynamo.json`. This file describes the processing pipeline which should be setup by tomoBEAR to process this data set.
 
+
+
+The following paragraphs will explain the changes you need to do to the file to be able to run tomoBEAR on your local machine
 
 # HIV (EMPIAR-10164)
 
