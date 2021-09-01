@@ -21,7 +21,7 @@ The following paragraphs will explain the changes you need to do to the JSON fil
 
 First you need to show tomoBEAR the path to the data
 
-`"general": {<br/>
+`"general": {/\
     "project_name": "Ribosome",<br/>
     "project_description": "Ribosome EMPIAR 10064",<br/>
     "data_path": "/path/to/ribosome/data/*.mrc",<br/>
