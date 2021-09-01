@@ -151,8 +151,8 @@ downlaoded software in your `PATH` variable of your Linux system. If this
 is not the case you need to adjust the paths to the executables in the
 `defaults.json` file which you can find in the folder `configurations`.
 
-The keys where the values needs to be adjusted can be found in the
-general section of the json file and are the following ones:
+The keys where the values need to be adjusted can be found in the
+general section of the JSON file and are the following ones:
 
 * `"pipeline_location": ""`
 * `"motion_correction_command": ""`
