@@ -39,6 +39,10 @@ After that change to the folder tomoBEAR with
 
 * `cd tomoBEAR`
 
+Next you need to permit execution of `matlab_shell.sh` so MATLAB is able to initialize modules before tomoBEAR executes applications to fulfill its task
+
+* `chmod u+x matlab_shell.sh`
+
 Inside of the tomoBEAR folder you will find a configurations folder in which the file `defaults.json` can be found. Open the file `defaults.json` and adjust the following variables inside the general section
 
 * `"pipeline_location": ""` put in the double quotes the location of tomoBEAR
