@@ -19,9 +19,7 @@ If you have already cloned the [tomoBEAR github repository](https://github.com/K
 
 The following paragraphs will explain the variables contained in the JSON file and the needed changes to be able to run tomoBEAR on your local machine. In the end of this chapter the whole JSON file is shown.
 
-First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder.
-
-To run the tomoBEAR on the Ribosome data set. 
+First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder. This must be done in the general section of the `json` file. 
 
 `  "general": {`  
 `      "project_name": "Ribosome",`  
@@ -38,6 +36,13 @@ To run the tomoBEAR on the Ribosome data set.
 `      "as_boxes": false`  
 `  }`  
 
+Everything else should be fine for now and the processing can be started. To run the tomoBEAR on the Ribosome data set you need to type in the following command in the command window of MATLAB
+
+* `runTomoBear("local", "/path/to/ribosome_empiar_10064_dynamo.json")` 
+
+or if you are using a compiled version of tomoBEAR and have everything set up properly type in the following command on the command line from the tomoBEAR folder
+
+* `./run_tomoBEAR local /path/to/ribosome_empiar_10064_dynamo.json /path/to/defaults.json`
 
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
