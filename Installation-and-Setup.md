@@ -149,7 +149,7 @@ also work but is not tested.
 
 Head to the
 [IMOD](https://bio3d.colorado.edu/ftp/latestIMOD/RHEL7-64_CUDA8.0)
-download page and get the IMOD version 4.10.42.
+download page and get the IMOD version 4.10.42 or earlier.
 
 #### Software Installation
 
