@@ -1,3 +1,6 @@
+Currently we are at the stage of alpha testing, we will be happy if you try it, we will help you to get going. Please write to Nikita Balyschew (nibalysc@biophys.mpg.de) if you have problems.
+
+
 # Prerequisites
 
 This software was developed and tested on machines with the following properties:
