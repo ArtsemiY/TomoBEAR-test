@@ -48,6 +48,24 @@ or if you are using a compiled version of tomoBEAR and have everything set up pr
 ./run_tomoBEAR local /path/to/ribosome_empiar_10064_dynamo.json /path/to/defaults.json
 ```
 
+When you followed all the steps thoroughly tomoBEAR should run up to the first appearence of StopPipeline. That means the following modules will be executed. This can take a while. It depends on your infrastructure and setup.
+
+```json
+    "MetaData": {
+    },
+    "CreateStacks": {
+    },
+    "DynamoTiltSeriesAlignment": {
+    },
+    "DynamoCleanStacks": {
+    },
+    "BatchRunTomo": {
+        "skip_steps": [4],
+        "ending_step": 6
+    },
+    "StopPipeline": {
+    }
+```
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
 
