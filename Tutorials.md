@@ -38,7 +38,9 @@ First of all and most importantly you need to show tomoBEAR the path to the data
 ```
 Everything else should be fine for now and the processing can be started. To run the tomoBEAR on the Ribosome data set you need to type in the following command in the command window of MATLAB
 
-* `runTomoBear("local", "/path/to/ribosome_empiar_10064_dynamo.json")` 
+* ```matlab
+runTomoBear("local", "/path/to/ribosome_empiar_10064_dynamo.json")
+```
 
 or if you are using a compiled version of tomoBEAR and have everything set up properly type in the following command on the command line from the tomoBEAR folder
 
