@@ -67,33 +67,35 @@ When you followed all the steps thoroughly tomoBEAR should run up to the first a
     "StopPipeline": {
     }
 ```
-This can take a while. It depends on your infrastructure and setup. After tomoBEAR stops you caninspect the fiducial model in the folder of ```batchruntomo``` which you can find in your processing folder.
+This can take a while. It depends on your infrastructure and setup. After tomoBEAR stops you caninspect the fiducial model in the folder of `batchruntomo` which you can find in your processing folder.
 
 ```shell
 cd /path/to/your/processing/folder/5_BatchRunTomo_1
 ```
 
-Now you can inspect the alignment of every tilt stack one after the other and can possibly refine it if needed. For that you can use the following command. Please replace ```xxx``` with the tomogram number you want to inspect.
+Now you can inspect the alignment of every tilt stack one after the other and can possibly refine it if needed. For that you can use the following command. Please replace `xxx` with the tomogram number you want to inspect.
 
 ```shell
 etomo tomogram_xxx/*.edf
 ```
-When ```etomo``` starts just chose the ```fine alignment``` step which should be lila if everything went fine for that tomogram and then click on ```edit/view fiducial model``` to start ```3dmod``` with the right options to be able to refine the gold beads. Before you start to refine just press the arrow up button in the top left corner of the window with the viewport. To refine the gold beads click on ```Go to next big residual``` in the window with the stacked buttons from top to bottom and theview in the viewport window should change immediately to the location of a gold bead with a big residual. Now see if you can center the marker better on the gold bead with the right mouse button. It is important that you don't put it on the peak of the red arrow but center it on the gold bead. When you are finished with this gold bead just press again on the ```Go to next big residual``` button. After you are finished with recentering the marker on the gold beads you need to press the ```Save and run tiltalign``` button.
 
-After you finished the inspection of all the alignments you can start ```tomoBEAR``` again as previously and it will continue from where it stopped up to the nex ```StopPipeline``` section.
+When `etomo` starts just chose the `fine alignment` step which should be Lila if everything went fine for that tomogram and then click on `edit/view fiducial model` to start `3dmod` with the right options to be able to refine the gold beads. Before you start to refine just press the arrow up button in the top left corner of the window with the view port. To refine the gold beads click on `Go to next big residual` in the window with the stacked buttons from top to bottom and the view in the view port window should change immediately to the location of a gold bead with a big residual. Now see if you can center the marker better on the gold bead with the right mouse button. It is important that you don't put it on the peak of the red arrow but center it on the gold bead. When you are finished with this gold bead just press again on the `Go to next big residual` button. After you are finished with re-centering the marker on the gold beads you need to press the `Save and run tiltalign` button.
 
-To continue running ```tomoBEAR``` on the Ribosome data set you need to type in as previously the following command in the command window of MATLAB
+After you finished the inspection of all the alignments you can start `tomoBEAR` again as previously and it will continue from where it stopped up to the next `StopPipeline` section.
+
+To continue running `tomoBEAR` on the Ribosome data set you need to type in as previously the following command in the command window of MATLAB
 
 ```matlab
 runTomoBear("local", "/path/to/ribosome_empiar_10064_dynamo.json")
 ```
 
-or if you are using a compiled version of tomoBEAR and have everything set up properly type in the following command on the command line from the ```tomoBEAR``` folder
+or if you are using a compiled version of tomoBEAR and have everything set up properly type in the following command on the command line from the `tomoBEAR` folder
 
 ```shell
 ./run_tomoBEAR local /path/to/ribosome_empiar_10064_dynamo.json /path/to/defaults.json
 ```
-```tomoBEAR``` should now detect that it has stopped at the previous step ```StopPipeline``` and continue from where it stopped. The following excerpt from the ```json``` file is describing what tomoBEAR needs to do next.
+
+`tomoBEAR` should now detect that it has stopped at the previous step `StopPipeline` and continue from where it stopped. The following excerpt from the `ribosome_empiar_10064_dynamo.json` file is describing what `tomoBEAR` needs to do next.
 
 ```json
     "BatchRunTomo": {
