@@ -48,7 +48,7 @@ or if you are using a compiled version of tomoBEAR and have everything set up pr
 ./run_tomoBEAR local /path/to/ribosome_empiar_10064_dynamo.json /path/to/defaults.json
 ```
 
-When you followed all the steps thoroughly tomoBEAR should run up to the first appearence of StopPipeline. That means the following modules will be executed. This can take a while. It depends on your infrastructure and setup.
+When you followed all the steps thoroughly tomoBEAR should run up to the first appearence of StopPipeline. That means the following modules will be executed.
 
 ```json
     "MetaData": {
@@ -66,6 +66,13 @@ When you followed all the steps thoroughly tomoBEAR should run up to the first a
     "StopPipeline": {
     }
 ```
+This can take a while. It depends on your infrastructure and setup. After tomoBEAR stops you caninspect the fiducial model in the folder of ```batchruntomo``` which you can find in your processing folder.
+
+```shell
+cd /path/to/your/processing/folder/5_BatchRunTomo
+```
+
+now you can inspect the alignment of every tilt stack one after the other.
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
 
