@@ -21,20 +21,20 @@ The following paragraphs will explain the variables contained in the JSON file a
 
 First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder. This must be done in the general section of the `json` file. 
 ```json
-`  "general": {`  
-`      "project_name": "Ribosome",`  
-`      "project_description": "Ribosome EMPIAR 10064",`  
-`      "data_path": "/path/to/ribosome/data/*.mrc",`  
-`      "processing_path": "/path/to/processing/folder",`  
-`      "expected_symmetrie": "C1",`  
-`      "apix": 2.62,`  
-`      "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],`  
-`      "gold_bead_size_in_nm": 9,`  
-`      "template_matching_binning": 8,`  
-`      "binnings": [2, 4, 8],`  
-`      "reconstruction_thickness": 1400,`  
-`      "as_boxes": false`  
-`  }`  
+  "general": {
+      "project_name": "Ribosome",
+      "project_description": "Ribosome EMPIAR 10064",
+      "data_path": "/path/to/ribosome/data/*.mrc",
+      "processing_path": "/path/to/processing/folder",
+      "expected_symmetrie": "C1",
+      "apix": 2.62,
+      "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],
+      "gold_bead_size_in_nm": 9,
+      "template_matching_binning": 8,
+      "binnings": [2, 4, 8],
+      "reconstruction_thickness": 1400,
+      "as_boxes": false
+  }
 ```
 Everything else should be fine for now and the processing can be started. To run the tomoBEAR on the Ribosome data set you need to type in the following command in the command window of MATLAB
 
