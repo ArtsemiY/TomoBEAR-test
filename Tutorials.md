@@ -127,6 +127,9 @@ or if you are using a compiled version of tomoBEAR and have everything set up pr
     },
 ```
 
+This segment performs estimation of defocus using GCTF (GCTFCtfphaseflipCTFCorrection{}). You can inspect the quality of fitting by going into the folder and typing `imod tomogram_XXX/*.ctf` and making sure that the Thon rings match the estimation. If not - play with the parameters of the GCTFCtfphaseflipCTFCorrection module. 
+
+Then binned aligned ctf-corrected stacks are produced by BinStacks{} and tomographic reconstructions are generated for the binnnings specified in the general segment. In this example the particles are picked using template matching. First a template from EMDB is produced at a proper voxel side, then DynamoTemplateMatching{} creates cross-correlation volumes which can be inspected. Finally, highest cross-correlation peaks, over 2.5 standard deviations above the mean value in the CC volume are set for extraction to 3D particle files, the coordinates are stored in the particle_table files in the dynamo format. 
 
 ```json
     "DynamoAlignmentProject": {
