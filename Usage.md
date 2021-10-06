@@ -295,18 +295,19 @@ which are described further in the follwoing chapters.
 
 To execute the workflow you just need to type:
 
-`   tomoBEAR local /path/to/project.json /path/to/defaults.json`
-
+```shell
+    ./run_tomoBEAR.sh local /path/to/project.json /path/to/defaults.json
+```
 ## SLURM Execution
 
 For the execution of the workflow on a cluster you need to adjust the
 following keys in the general section:
 
-Set the value for the key "slurm_partition" to decide on which cluster
+Set the value for the key `"slurm_partition"` to decide on which cluster
 partition the should run. Be sure to use a partition where the nodes
 have GPUs installed.
 
--   "slurm_partition": "partition"
+-   `"slurm_partition": "partition"`
 
 If you want to limit the processing to a set of specific nodes to be
 nice to others so you leave some nodes for them for processing you need
@@ -316,7 +317,9 @@ to set the value for the key "slurm_node_list".
 
 To execute the workflow you just need to type:
 
-`   tomoBEAR slurm /path/to/project.json /path/to/defaults.json`
+```shell
+    ./run_tomoBEAR.sh slurm /path/to/project.json /path/to/defaults.json
+```
 
 ## Cleanup
 
