@@ -75,7 +75,7 @@ The running time depends on your infrastructure and setup. After tomoBEAR stops 
 cd /path/to/your/processing/folder/5_BatchRunTomo_1
 ```
 
-Now you can inspect the alignment of every tilt stack one after the other and can possibly refine it if needed. For that you can use the following command. Please replace `xxx` with the tomogram number you want to inspect.
+Now you can inspect the alignment of every tilt stack one after the other and can possibly refine it if needed. For that you can use the following command. Please replace `xxx` with the tomogram number(s) that you want to inspect.
 
 ```shell
 etomo tomogram_xxx/*.edf
