@@ -24,7 +24,7 @@ tuned if needed.
             "reconstruction_thickness": xxxx,
             "rotation_tilt_axis": xx,
             "aligned_stack_binning": x,
-            "pre_aligned_stack_binning": x
+            "pre_aligned_stack_binning": x.
             "binnings": [x, x, xx]
         },
         "MetaData": {
