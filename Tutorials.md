@@ -67,7 +67,9 @@ When you followed all the steps thoroughly tomoBEAR should run up to the first a
     "StopPipeline": {
     }
 ```
-This can take a while. It depends on your infrastructure and setup. After tomoBEAR stops you caninspect the fiducial model in the folder of `batchruntomo` which you can find in your processing folder.
+This can take a while, as the result of this segment tomoBEAR will create a folder structure with subfolders for the individual steps. You can monitor the progress of the execution in shell and by inspecting the contents of the folders. Upon success of an operation a file SUCCESS is written inside each folder. If you want to rerun a step you can terminate the process, change parameters, remove the SUCCESS file (or the entire subfolder) and restart the process. Here the stacks have already been assembled, so neither Motioncorr2{}, not SortFiles{} modules were not needed. Here the key functionality is performed by DynamoTiltSeriesAlignment{} (a recommended tutorial here https://wiki.dynamo.biozentrum.unibas.ch/w/index.php/Walkthrough_on_GUI_based_tilt_series_alignment) after which the projections containing low number of tracked gold beads are excluded by DynamoCleanStacks{}. Finally, the output is converted into an IMOD project.
+
+The running time depends on your infrastructure and setup. After tomoBEAR stops you can inspect the fiducial model in the folder of `batchruntomo` which you can find in your processing folder.
 
 ```shell
 cd /path/to/your/processing/folder/5_BatchRunTomo_1
