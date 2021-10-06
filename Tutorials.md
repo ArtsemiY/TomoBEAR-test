@@ -125,6 +125,10 @@ or if you are using a compiled version of tomoBEAR and have everything set up pr
     "TemplateMatchingPostProcessing": {
         "cc_std": 2.5
     },
+```
+
+
+```json
     "DynamoAlignmentProject": {
         "iterations": 3,
         "classes": 4,
