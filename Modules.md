@@ -967,23 +967,23 @@ is also implemented. This module needs to be run before template
 matching is executed.
 
 ```json
-`   "EMDTemplateGeneration": {
-`       "execution_method": "once",
-`       "template_emd_number": "",
-`       "mask_bandpass": [0, 2, 2],
-`       "template_bandpass_cut_on_fourier_pixel": 2,
-`       "template_bandpass_cut_off_resolution_in_angstrom": 20,
-`       "template_bandpass_smoothing_pixels": 3,
-`       "ratio_mask_pixels_based_on_unbinned_pixels": 0.05,
-`       "use_half_template_size": false,
-`       "mask_cut_off": 0.05,
-`       "template_cut_off": 0.75,
-`       "type": "dynamo",
-`       "use_bandpassed_template": true,
-`       "use_smoothed_mask": true,
-`       "dark_density": true,
-`       "skip": false,
-`       "citation": ""
+    "EMDTemplateGeneration": {
+        "execution_method": "once",
+        "template_emd_number": "",
+        "mask_bandpass": [0, 2, 2],
+        "template_bandpass_cut_on_fourier_pixel": 2,
+        "template_bandpass_cut_off_resolution_in_angstrom": 20,
+        "template_bandpass_smoothing_pixels": 3,
+        "ratio_mask_pixels_based_on_unbinned_pixels": 0.05,
+        "use_half_template_size": false,
+        "mask_cut_off": 0.05,
+        "template_cut_off": 0.75,
+        "type": "dynamo",
+        "use_bandpassed_template": true,
+        "use_smoothed_mask": true,
+        "dark_density": true,
+        "skip": false,
+        "citation": ""
     }
 ```
 
