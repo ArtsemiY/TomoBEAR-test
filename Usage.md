@@ -324,7 +324,7 @@ To execute the workflow you just need to type the following command in the shell
 Or type the following command in the command window of MATLAB if you are using tomoBEAR from within MATLAB
 
 ```matlab
-    ./runTomoBear("slurm", "/path/to/project.json", "/path/to/defaults.json");
+    runTomoBear("slurm", "/path/to/project.json", "/path/to/defaults.json");
 ```
 
 
