@@ -313,7 +313,7 @@ If you want to limit the processing to a set of specific nodes to be
 nice to others so you leave some nodes for them for processing you need
 to set the value for the key "slurm_node_list".
 
--   `"slurm_node_list": \["node1", "node2", "node3"\]`
+-   `"slurm_node_list": ["node1", "node2", "node3"]`
 
 To execute the workflow you just need to type the following command in the shell if you are using the compiled version of tomoBEAR
 
