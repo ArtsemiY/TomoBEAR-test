@@ -345,4 +345,14 @@ Files that are kept are
 
 all other files are removed.
 
-`   tomoBEAR cleanup /path/to/project.json /path/to/defaults.json`
+Here is the shell command which you need to run in this form from the command line if you use a compiled version
+
+```shell
+    ./run_tomoBEAR.sh cleanup /path/to/project.json /path/to/defaults.json
+```
+
+If you use MATLAB for the execution of tomoBEAR you need to type the following statement in the command window of MATLAB
+
+```matlab
+    runTomoBear("cleanup", "/path/to/project.json", "/path/to/defaults.json");
+```
