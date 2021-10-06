@@ -132,124 +132,124 @@ section.
 | citation                                             | ""                                                                                            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                    |
 
 ```json
-"general": {
-    "gpu": -1,
-    "jobs_per_node": 1,
-    "gpus_per_node": 2,
-    "nodes": [],
-    "slurm_execute": true,
-    "slurm_node_list": "",
-    "slurm_nodes": 0,
-    "slurm_nice": 0,
-    "slurm_partition": "",
-    "slurm_gres": "",
-    "slurm_qos": "",
-    "slurm_constraint": "",
-    "slurm_time": "",
-    "slurm_exclusive": true,
-    "slurm_flags": "",
-    "slurm_gpus": 0,
-    "slurm_mem_per_gpu_in_gb": 0,
-    "slurm_gpus_per_task": 0,
-    "slurm": false,
-    "gpu_worker_multiplier": 1,
-    "pipeline_location": "",
-    "pipeline_executable": "run_tomoBEAR.sh",
-    "sbatch_wrapper": "sbatch.sh",
-    "cuda_forward_compatibility": true,
-    "random_number_generator_seed": 0,
-    "tomogram_output_prefix": "tomogram",
-    "tomogram_input_prefix": "",
-    "data_path": "",
-    "processing_path": "",
-    "debug": false,
-    "project_name": "pipeline",
-    "project_description": "new_project description",
-    "wipe_cache": false,
-    "motion_correction_command": "MotionCor2_1.4.0_Cuda102",
-    "ctf_correction_command": "Gctf-v1.06_sm_30_cu8.0_x86_64",
-    "double_numbering": true,
-    "prefix_position": 0,
-    "tomogram_number_position": -1,
-    "tilt_number_position": -1,
-    "angle_position": -1,
-    "date_position": -1,
-    "time_position": -1,
-    "output_folder": "output",
-    "scratch_folder": "scratch",
-    "remove_folders": false,
-    "tilt_scheme": "dose_symmetric",
-    "tilting_step": 3,
-    "gold_bead_size_in_nm": 10,
-    "rotation_tilt_axis": 85,
-    "pid_wait_time": 5,
-    "raw_files_folder": "raw_files",
-    "fid_files_folder": "fiducial_models",
-    "motion_corrected_files_folder": "motion_corrected_mrcs",
-    "aligned_tilt_stacks_folder": "aligned_tilt_stacks",
-    "ctf_corrected_aligned_tilt_stacks_folder": "ctf_corrected_aligned_tilt_stacks",
-    "tilt_stacks_folder": "tilt_stacks",
-    "binned_tilt_stacks_folder": "binned_tilt_stacks",
-    "binned_aligned_tilt_stacks_folder": "binned_aligned_tilt_stacks",
-    "ctf_corrected_binned_aligned_tilt_stacks_folder": "ctf_corrected_binned_aligned_tilt_stacks",
-    "tomograms_folder": "tomograms",
-    "ctf_corrected_tomograms_folder": "ctf_corrected_tomograms",
-    "exact_filtered_tomograms_folder": "exact_filtered_tomograms",
-    "binned_tomograms_folder": "binned_tomograms",
-    "ctf_corrected_binned_tomograms_folder": "ctf_corrected_binned_tomograms",
-    "exact_filtered_ctf_corrected_binned_tomograms_folder": "exact_filtered_ctf_corrected_binned_tomograms",
-    "binned_exact_filtered_tomograms_folder": "binned_exact_filtered_tomograms",
-    "particles_folder": "particles",
-    "particles_table_folder": "particles_table",
-    "meta_data_folder": "meta_data",
-    "dynamo_folder": "dynamo",
-    "templates_folder": "templates",
-    "gain_correction_folder": "gain_correction",
-    "binarized_stacks_folder": "binarized_stacks",
-    "ctf_corrected_stack_suffix": "ctfc",
-    "ignore_success_files": false,
-    "keV": 300,
-    "spherical_aberation": 2.7,
-    "skip_n_first_projections": 3,
-    "nominal_defocus_in_nm": 4,
-    "link_files_threshold_in_mb": 1,
-    "tilt_type": "single",
-    "minimum_files": 15,
-    "increase_folder_numbers": false,
-    "cpu_fraction": 0.25,
-    "tomogram_indices": [],
-    "tomogram_begin": 0,
-    "tomogram_end": 0,
-    "tomogram_step": 1,
-    "aligned_stack_binning":1,
-    "pre_aligned_stack_binning": 4,
-    "template_matching_binning": 4,
-    "reconstruction_thickness": 2000,
-    "binnings": [2, 4],
-    "ignore_file_system_time_stamps": true,
-    "automatic_filename_parts_recognition": true,
-    "angle_regex": "_([+-]*[{\\d}2]*[.]+\\d+)[_.]",
-    "name_regex": "([A-Za-z\\d_]+[A-Za-z]+)",
-    "number_regex": "[_]*([\\d]+[_[\\d]*]*)_",
-    "name_number_regex": "([A-Za-z\\d_]+[A-Za-z]+)[_]*([\\d]+[_[\\d]*]*)",
-    "name_number_regex_backup": "([A-Za-z\\d_]+[A-Za-z]+)[_]*([\\d]+[_[\\d]*]*)_",
-    "month_date_time_regex": "[_]+([{A-Z}1][{a-z}2]+[\\d]+)_([{\\d}2]+.[{\\d}2]+.[{\\d}2]+)[.]+",
-    "tomogram_acquisition_time_in_minutes": 70,
-    "keep_intermediates": true,
-    "reconstruct": "binned",
-    "em_clarity_path": "",
-    "dynamo_path": "/sbdata/EM/projects/nibalysc/programs/dynamo-v-1.1.509_MCR-9.6.0_GLNXA64_withMCR",
-    "astra_path": "",
-    "modules": ["IMOD", "cuda-10.2", "Gctf-v1.06", "MotionCor2"],
-    "duplicated_tilts": "last",
-    "ft_bin": 1,
-    "expected_symmetrie": "C1",
-    "checkpoint_module": false,
-    "propagate_failed_stacks": true,
-    "first_tilt_angle": 0,
-    "execute": true,
-    "citation": ""
-}
+    "general": {
+        "gpu": -1,
+        "jobs_per_node": 1,
+        "gpus_per_node": 2,
+        "nodes": [],
+        "slurm_execute": true,
+        "slurm_node_list": "",
+        "slurm_nodes": 0,
+        "slurm_nice": 0,
+        "slurm_partition": "",
+        "slurm_gres": "",
+        "slurm_qos": "",
+        "slurm_constraint": "",
+        "slurm_time": "",
+        "slurm_exclusive": true,
+        "slurm_flags": "",
+        "slurm_gpus": 0,
+        "slurm_mem_per_gpu_in_gb": 0,
+        "slurm_gpus_per_task": 0,
+        "slurm": false,
+        "gpu_worker_multiplier": 1,
+        "pipeline_location": "",
+        "pipeline_executable": "run_tomoBEAR.sh",
+        "sbatch_wrapper": "sbatch.sh",
+        "cuda_forward_compatibility": true,
+        "random_number_generator_seed": 0,
+        "tomogram_output_prefix": "tomogram",
+        "tomogram_input_prefix": "",
+        "data_path": "",
+        "processing_path": "",
+        "debug": false,
+        "project_name": "pipeline",
+        "project_description": "new_project description",
+        "wipe_cache": false,
+        "motion_correction_command": "MotionCor2_1.4.0_Cuda102",
+        "ctf_correction_command": "Gctf-v1.06_sm_30_cu8.0_x86_64",
+        "double_numbering": true,
+        "prefix_position": 0,
+        "tomogram_number_position": -1,
+        "tilt_number_position": -1,
+        "angle_position": -1,
+        "date_position": -1,
+        "time_position": -1,
+        "output_folder": "output",
+        "scratch_folder": "scratch",
+        "remove_folders": false,
+        "tilt_scheme": "dose_symmetric",
+        "tilting_step": 3,
+        "gold_bead_size_in_nm": 10,
+        "rotation_tilt_axis": 85,
+        "pid_wait_time": 5,
+        "raw_files_folder": "raw_files",
+        "fid_files_folder": "fiducial_models",
+        "motion_corrected_files_folder": "motion_corrected_mrcs",
+        "aligned_tilt_stacks_folder": "aligned_tilt_stacks",
+        "ctf_corrected_aligned_tilt_stacks_folder": "ctf_corrected_aligned_tilt_stacks",
+        "tilt_stacks_folder": "tilt_stacks",
+        "binned_tilt_stacks_folder": "binned_tilt_stacks",
+        "binned_aligned_tilt_stacks_folder": "binned_aligned_tilt_stacks",
+        "ctf_corrected_binned_aligned_tilt_stacks_folder": "ctf_corrected_binned_aligned_tilt_stacks",
+        "tomograms_folder": "tomograms",
+        "ctf_corrected_tomograms_folder": "ctf_corrected_tomograms",
+        "exact_filtered_tomograms_folder": "exact_filtered_tomograms",
+        "binned_tomograms_folder": "binned_tomograms",
+        "ctf_corrected_binned_tomograms_folder": "ctf_corrected_binned_tomograms",
+        "exact_filtered_ctf_corrected_binned_tomograms_folder": "exact_filtered_ctf_corrected_binned_tomograms",
+        "binned_exact_filtered_tomograms_folder": "binned_exact_filtered_tomograms",
+        "particles_folder": "particles",
+        "particles_table_folder": "particles_table",
+        "meta_data_folder": "meta_data",
+        "dynamo_folder": "dynamo",
+        "templates_folder": "templates",
+        "gain_correction_folder": "gain_correction",
+        "binarized_stacks_folder": "binarized_stacks",
+        "ctf_corrected_stack_suffix": "ctfc",
+        "ignore_success_files": false,
+        "keV": 300,
+        "spherical_aberation": 2.7,
+        "skip_n_first_projections": 3,
+        "nominal_defocus_in_nm": 4,
+        "link_files_threshold_in_mb": 1,
+        "tilt_type": "single",
+        "minimum_files": 15,
+        "increase_folder_numbers": false,
+        "cpu_fraction": 0.25,
+        "tomogram_indices": [],
+        "tomogram_begin": 0,
+        "tomogram_end": 0,
+        "tomogram_step": 1,
+        "aligned_stack_binning":1,
+        "pre_aligned_stack_binning": 4,
+        "template_matching_binning": 4,
+        "reconstruction_thickness": 2000,
+        "binnings": [2, 4],
+        "ignore_file_system_time_stamps": true,
+        "automatic_filename_parts_recognition": true,
+        "angle_regex": "_([+-]*[{\\d}2]*[.]+\\d)[_.]",
+        "name_regex": "([A-Za-z\\d_]+[A-Za-z]+)",
+        "number_regex": "[_]*([\\d]+[_[\\d]*]*)_",
+        "name_number_regex": "([A-Za-z\\d_]+[A-Za-z]+)[_]*([\\d]+[_[\\d]*]*)",
+        "name_number_regex_backup": "([A-Za-z\\d_]+[A-Za-z]+)[_]*([\\d]+[_[\\d]*]*)_",
+        "month_date_time_regex": "[_]+([{A-Z}1][{a-z}2]+[\\d]+)_([{\\d}2]+.[{\\d}2]+.[{\\d}2]+)[.]+",
+        "tomogram_acquisition_time_in_minutes": 70,
+        "keep_intermediates": true,
+        "reconstruct": "binned",
+        "em_clarity_path": "",
+        "dynamo_path": "/sbdata/EM/projects/nibalysc/programs/dynamo-v-1.1.509_MCR-9.6.0_GLNXA64_withMCR",
+        "astra_path": "",
+        "modules": ["IMOD", "cuda-10.2", "Gctf-v1.06", "MotionCor2"],
+        "duplicated_tilts": "last",
+        "ft_bin": 1,
+        "expected_symmetrie": "C1",
+        "checkpoint_module": false,
+        "propagate_failed_stacks": true,
+        "first_tilt_angle": 0,
+        "execute": true,
+        "citation": ""
+    }
 ```
 
 # StopPipeline
@@ -263,9 +263,11 @@ need to be optimized.
 |------------------|---------------|---------------------------------------------------------------------------------------------------------------|----------|
 | execution_method | "control"     | this variable defines the execution method for the module, **note** for this module it needs to be left as is |          |
 
-`   "StopPipeline": {`  
-`       "execution_method": "control"`  
-`   }`
+```json
+    "StopPipeline": {
+        "execution_method": "control"
+    }
+```
 
 # MetaData
 
@@ -281,14 +283,16 @@ mean, std from the raw data.
 | skip               | false         | this flag if the execution of this processing step should be skipped at all, **note** normally you should not touch this if you don't know what you are doing                                                                                                                                   |          |
 | citation           | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                      |          |
 
-`   "MetaData":{`  
-`       "execution_method": "once",`  
-`       "parallel_execution": true,`  
-`       "do_statistics": false,`  
-`       "apix": 0,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+    "MetaData":{
+        "execution_method": "once",
+        "parallel_execution": true,
+        "do_statistics": false,
+        "apix": 0,
+        "skip": false,
+        "citation": ""
+    }
+```
 
 # SortFiles
 
@@ -304,14 +308,15 @@ them to their corresponding folders for further processing.
 | skip              | false         | this flag if the execution of this processing step should be skipped at all, **note** normally you should not touch this if you don't know what you are doing                                                                                         |          |
 | citation          | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                            |          |
 
-`   "SortFiles": {`  
-`       "execution_method": "parallel",`  
-`       "starting_tomogram": 1,`  
-`       "use_link": true,`  
-`       "fixed_number": 0,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+    "SortFiles": {
+        "execution_method": "parallel",
+        "starting_tomogram": 1,
+        "use_link": true,
+        "fixed_number": 0,
+        "skip": false,
+        "citation": ""
+```
 
 # MotionCor2
 
@@ -364,43 +369,45 @@ archive of MotionCor2.
 | citation_link                                 | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |          |
 | doi                                           | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |          |
 
-`   "MotionCor2": {`  
-`       "method": "MotionCor2",`  
-`       "execution_method": "in_order",`  
-`       "output_postfix": "motioncor2",`  
-`       "iterations": 50,`  
-`       "tolerance": 0.5,`  
-`       "gpu_memory": 0.5,`  
-`       "patch": "7 5 15",`  
-`       "group": 2,`  
-`       "outstack": 0,`  
-`       "gain": "",`  
-`       "defect": "",`  
-`       "dark": "",`  
-`       "b_factor": [500, 150],`  
-`       "in_fm_motion": 1,`  
-`       "apply_dose_weighting": false,`  
-`       "fm_dose": 0.3,`  
-`       "tilt": "",`  
-`       "magnification_anisotropy_major_scale": 1,`  
-`       "magnification_anisotropy_minor_scale": 1,`  
-`       "magnification_anisotropy_major_axis_angle": 360,`  
-`       "magnification_anisotropy_major_scale_tmp": 1,`  
-`       "magnification_anisotropy_minor_scale_tmp": 1,`  
-`       "magnification_anisotropy_major_axis_angle_tmp": 360,`  
-`       "split_sum": "false",`  
-`       "out_aln": "",`  
-`       "initial_dose": "",`  
-`       "align": "1",`  
-`       "throw": "0",`  
-`       "trunc": "0",`  
-`       "sum_range": [0, 150],`  
-`       "fm_ref": "",`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "MotionCor2": {
+        "method": "MotionCor2",
+        "execution_method": "in_order",
+        "output_postfix": "motioncor2",
+        "iterations": 50,
+        "tolerance": 0.5,
+        "gpu_memory": 0.5,
+        "patch": "7 5 15",
+        "group": 2,
+        "outstack": 0,
+        "gain": "",
+        "defect": "",
+        "dark": "",
+        "b_factor": [500, 150],
+        "in_fm_motion": 1,
+        "apply_dose_weighting": false,
+        "fm_dose": 0.3,
+        "tilt": "",
+        "magnification_anisotropy_major_scale": 1,
+        "magnification_anisotropy_minor_scale": 1,
+        "magnification_anisotropy_major_axis_angle": 360,
+        "magnification_anisotropy_major_scale_tmp": 1,
+        "magnification_anisotropy_minor_scale_tmp": 1,
+        "magnification_anisotropy_major_axis_angle_tmp": 360,
+        "split_sum": "false",
+        "out_aln": "",
+        "initial_dose": "",
+        "align": "1",
+        "throw": "0",
+        "trunc": "0",
+        "sum_range": [0, 150],
+        "fm_ref": "",
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # CreateStacks
 
@@ -426,20 +433,22 @@ frame-count is different.
 | citation_link                      | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                               |          |
 | doi                                | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                               |          |
 
-`   "CreateStacks": {`  
-`       "execution_method": "in_order",`  
-`       "slice_suffix": "view",`  
-`       "normalization_method": "frames",`  
-`       "normalized_postfix": "norm",`  
-`       "stack_name": "tiltstack",`  
-`       "pixel_intensity_average": 128,`  
-`       "pixel_intensity_standard_deviation": 4,`  
-`       "border_pixels": 75,`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "CreateStacks": {
+        "execution_method": "in_order",
+        "slice_suffix": "view",
+        "normalization_method": "frames",
+        "normalized_postfix": "norm",
+        "stack_name": "tiltstack",
+        "pixel_intensity_average": 128,
+        "pixel_intensity_standard_deviation": 4,
+        "border_pixels": 75,
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # DynamoTiltSeriesAlignment
 
@@ -473,115 +482,117 @@ be done in the json configuration file.
 | citation_link                             | ""                          | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                              |          |
 | doi                                       | ""                          | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                              |          |
 
-`   "DynamoTiltSeriesAlignment": {`  
-`       "execution_method": "parallel",`  
-`       "checkpoint_module": true,`  
-`       "method": "rms",`  
-`       "generate_fiducial_files": true,`  
-`       "dynamo_tilt_stack_alignment_template_file": "configurations/global.doc",`  
-`       "config_file_name": "config.doc",`  
-`       "skip_ctf_estimation": true,`  
-`       "mask_radius_factor": 1.5,`  
-`       "template_side_length_factor": 4,`  
-`       "max_shift_ratio": 0.25,`  
-`       "gold_bead_size_in_nm_testing_range": 1,`  
-`       "test_range": true,`  
-`       "test_whole_range": false,`  
-`       "take_defaults": true,`  
-`       "detection_binning_factor": 2,`  
-`       "original_parameters": {`  
-`           "settings.computing.cpus": "10", `  
-`           "settings.computing.gpuSet": 1,`  
-`           "settings.computing.gpuUse": 1, `  
-`           "settings.computing.parallelCPUUse": 1, `  
-`           "settings.general.amplitudeContrast": 0.9,`  
-`           "settings.general.apix": 1.701,`  
-`           "settings.general.nominalDefocus": -2.5, `  
-`           "settings.general.sphericalAberration": 2.7,`  
-`           "settings.general.voltage": 300,`  
-`           "steps.alignWorkingStack.alignmentBinLevel": 8,`  
-`           "steps.binnedReconstruction.reconstructBinnedSIRT": 0,`  
-`           "steps.binnedReconstruction.reconstructBinnedWBP": 0,`  
-`           "steps.binnedReconstruction.reconstructBinnedWBPCTF": 0, `  
-`           "steps.binnedReconstruction.reconstructionBinnedHeight": 500,`  
-`           "steps.binner.workingBinningFactor": 4,`  
-`           "steps.chainSelector.minimumMarkerDistance": 100,`  
-`           "steps.chainSelector.minimumMarkersPerTilt": 3, `  
-`           "steps.chainSelector.minimumOccupancy": 15,`  
-`           "steps.chainSelector.relaxedMinimumOccupancy": 5,`  
-`           "steps.chainSelector.skipMarkedIndices": 1, `  
-`           "steps.correctCTF.imodPhaseFlipExecutable": "ctfphaseflip", `  
-`           "steps.correctCTF.phaseflipDefocusTolerance": 250, `  
-`           "steps.correctCTF.phaseflipInterpolationWidth": 4, `  
-`           "steps.correctCTF.phaseflipMaximumStripWidth": 1024,`  
-`           "steps.correctCTF.useImodPhaseFlip": 1,`  
-`           "steps.detectPeaks.beadRadius": 30, `  
-`           "steps.detectPeaks.detectionBinningFactor": 2, `  
-`           "steps.detectPeaks.maskRadius": 36,`  
-`           "steps.detectPeaks.templateSidelength": 72,`  
-`           "steps.estimateCTF.ctffind4": "ctffind",`  
-`           "steps.estimateCTF.ctffind4Card": "$DYNAMO_ROOT/examples/ctffind4Card.doc",`  
-`           "steps.estimateCTF.ctffind4Use": 0,`  
-`           "steps.estimateCTF.ctffind4UseCard": 0, `  
-`           "steps.finalSelection.maximalResidualPerObservation": "Inf", `  
-`           "steps.finalSelection.maximalResidualPerTrace": "Inf", `  
-`           "steps.finalSelection.minimumAmountOfMarkersPerMicrograph": 2,`  
-`           "steps.fittingModel.psi": "single", `  
-`           "steps.fittingModel.psiRange": 2,`  
-`           "steps.fixAlignmentMarkers.stackZshift": 0, `  
-`           "steps.fullReconstruction.centerBinnedCoordinatesValue": [0, 0, 0], `  
-`           "steps.fullReconstruction.reconstructFullSIRT": 0, `  
-`           "steps.fullReconstruction.reconstructFullWBP": 0, `  
-`           "steps.fullReconstruction.reconstructFullWBPCTF": 0, `  
-`           "steps.fullReconstruction.reconstructionFullSize": [400, 400, 400], `  
-`           "steps.fullReconstruction.reconstructionShiftCenter": [0, 0, 0], `  
-`           "steps.fullReconstruction.useCenterOnbinnedCoordinates": 0, `  
-`           "steps.independentMarkerRefinement.gaussfiltOutlierDetectionCC": 1, `  
-`           "steps.independentMarkerRefinement.iterationsRefineAverages": 1, `  
-`           "steps.independentMarkerRefinement.recenterAverages": 1, `  
-`           "steps.peakFeatures.symmetryOrder": 9, `  
-`           "steps.peakSelector.useSobelForSelection": 1, `  
-`           "steps.peakSelector.useSymmetryOrderForSelection": 1, `  
-`           "steps.reindexer.excludeMultipleMatches": 1, `  
-`           "steps.reindexer.exclusionRadiusMultipleMatches": 30, `  
-`           "steps.reindexer.minimumOccupancy": 10, `  
-`           "steps.reindexer.proximityThreshold3DThinning": 20, `  
-`           "steps.reindexer.proximityThresholdReprojection": 10, `  
-`           "steps.shifter.maximalHysteresis": 20, `  
-`           "steps.shifter.maximalShift": 1000, `  
-`           "steps.shifter.shiftInterval": 20, `  
-`           "steps.shifter.skipManualDiscardsInShifts": 1, `  
-`           "steps.tiltExtensor.knotGridSeparation": 20, `  
-`           "steps.tiltExtensor.maximumOverlapProjections": 50, `  
-`           "steps.tiltExtensor.minimalKnotContributions": 15, `  
-`           "steps.tiltExtensor.rerunIterativeReindexingInExtensor": 1, `  
-`           "steps.tiltExtensor.rerunTiltGapFillingInExtensor": 1, `  
-`           "steps.tiltExtensor.separationYStripe": 20, `  
-`           "steps.tiltExtensor.thresholdKnotDistance": 40, `  
-`           "steps.tiltExtensor.widthYStripe": 40, `  
-`           "steps.tiltGapFiller.estimateResidualsThreshold": 0, `  
-`           "steps.tiltGapFiller.increaseDistanceThreshold": 10, `  
-`           "steps.tiltGapFiller.initialDistanceThreshold": 10, `  
-`           "steps.tiltGapFiller.maximalDistanceThreshold": 40, `  
-`           "steps.tiltGapFiller.maximumMarkersDefiningGap": 4, `  
-`           "steps.tiltGapFiller.minimumMarkersTargeted": 4, `  
-`           "steps.tiltGapFiller.minimumOccupancyContributingChain": 4, `  
-`           "steps.tiltGapFiller.residualsThreshold": 5, `  
-`           "steps.tiltGapFiller.targetedOccupancyContributingChain": 10, `  
-`           "steps.traceGapFiller.exclusionRadius": 30, `  
-`           "steps.traceGapFiller.fastCC": 1, `  
-`           "steps.traceGapFiller.maximalDeviationFromReprojection": 5, `  
-`           "steps.trimMarkers.maximalMedianResidualMarker": 10, `  
-`           "steps.trimMarkers.maximalResidualObservation": 5,`  
-`           "steps.trimMarkers.minimumOccupancy": 15, `  
-`           "steps.trimMarkers.proximityDeletionThreshold": 80, `  
-`           "steps.trimMarkers.proximityFusionThreshold": 10`  
-`       },`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "DynamoTiltSeriesAlignment": {
+        "execution_method": "parallel",
+        "checkpoint_module": true,
+        "method": "rms",
+        "generate_fiducial_files": true,
+        "dynamo_tilt_stack_alignment_template_file": "configurations/global.doc",
+        "config_file_name": "config.doc",
+        "skip_ctf_estimation": true,
+        "mask_radius_factor": 1.5,
+        "template_side_length_factor": 4,
+        "max_shift_ratio": 0.25,
+        "gold_bead_size_in_nm_testing_range": 1,
+        "test_range": true,
+        "test_whole_range": false,
+        "take_defaults": true,
+        "detection_binning_factor": 2,
+        "original_parameters": {
+            "settings.computing.cpus": "10", 
+            "settings.computing.gpuSet": 1,
+            "settings.computing.gpuUse": 1, 
+            "settings.computing.parallelCPUUse": 1, 
+            "settings.general.amplitudeContrast": 0.9,
+            "settings.general.apix": 1.701,
+            "settings.general.nominalDefocus": -2.5, 
+            "settings.general.sphericalAberration": 2.7,
+            "settings.general.voltage": 300,
+            "steps.alignWorkingStack.alignmentBinLevel": 8,
+            "steps.binnedReconstruction.reconstructBinnedSIRT": 0,
+            "steps.binnedReconstruction.reconstructBinnedWBP": 0,
+            "steps.binnedReconstruction.reconstructBinnedWBPCTF": 0, 
+            "steps.binnedReconstruction.reconstructionBinnedHeight": 500,
+            "steps.binner.workingBinningFactor": 4,
+            "steps.chainSelector.minimumMarkerDistance": 100,
+            "steps.chainSelector.minimumMarkersPerTilt": 3, 
+            "steps.chainSelector.minimumOccupancy": 15,
+            "steps.chainSelector.relaxedMinimumOccupancy": 5,
+            "steps.chainSelector.skipMarkedIndices": 1, 
+            "steps.correctCTF.imodPhaseFlipExecutable": "ctfphaseflip", 
+            "steps.correctCTF.phaseflipDefocusTolerance": 250, 
+            "steps.correctCTF.phaseflipInterpolationWidth": 4, 
+            "steps.correctCTF.phaseflipMaximumStripWidth": 1024,
+            "steps.correctCTF.useImodPhaseFlip": 1,
+            "steps.detectPeaks.beadRadius": 30, 
+            "steps.detectPeaks.detectionBinningFactor": 2, 
+            "steps.detectPeaks.maskRadius": 36,
+            "steps.detectPeaks.templateSidelength": 72,
+            "steps.estimateCTF.ctffind4": "ctffind",
+            "steps.estimateCTF.ctffind4Card": "$DYNAMO_ROOT/examples/ctffind4Card.doc",
+            "steps.estimateCTF.ctffind4Use": 0,
+            "steps.estimateCTF.ctffind4UseCard": 0, 
+            "steps.finalSelection.maximalResidualPerObservation": "Inf", 
+            "steps.finalSelection.maximalResidualPerTrace": "Inf", 
+            "steps.finalSelection.minimumAmountOfMarkersPerMicrograph": 2,
+            "steps.fittingModel.psi": "single", 
+            "steps.fittingModel.psiRange": 2,
+            "steps.fixAlignmentMarkers.stackZshift": 0, 
+            "steps.fullReconstruction.centerBinnedCoordinatesValue": [0, 0, 0], 
+            "steps.fullReconstruction.reconstructFullSIRT": 0, 
+            "steps.fullReconstruction.reconstructFullWBP": 0, 
+            "steps.fullReconstruction.reconstructFullWBPCTF": 0, 
+            "steps.fullReconstruction.reconstructionFullSize": [400, 400, 400], 
+            "steps.fullReconstruction.reconstructionShiftCenter": [0, 0, 0], 
+            "steps.fullReconstruction.useCenterOnbinnedCoordinates": 0, 
+            "steps.independentMarkerRefinement.gaussfiltOutlierDetectionCC": 1, 
+            "steps.independentMarkerRefinement.iterationsRefineAverages": 1, 
+            "steps.independentMarkerRefinement.recenterAverages": 1, 
+            "steps.peakFeatures.symmetryOrder": 9, 
+            "steps.peakSelector.useSobelForSelection": 1, 
+            "steps.peakSelector.useSymmetryOrderForSelection": 1, 
+            "steps.reindexer.excludeMultipleMatches": 1, 
+            "steps.reindexer.exclusionRadiusMultipleMatches": 30, 
+            "steps.reindexer.minimumOccupancy": 10, 
+            "steps.reindexer.proximityThreshold3DThinning": 20, 
+            "steps.reindexer.proximityThresholdReprojection": 10, 
+            "steps.shifter.maximalHysteresis": 20, 
+            "steps.shifter.maximalShift": 1000, 
+            "steps.shifter.shiftInterval": 20, 
+            "steps.shifter.skipManualDiscardsInShifts": 1, 
+            "steps.tiltExtensor.knotGridSeparation": 20, 
+            "steps.tiltExtensor.maximumOverlapProjections": 50, 
+            "steps.tiltExtensor.minimalKnotContributions": 15, 
+            "steps.tiltExtensor.rerunIterativeReindexingInExtensor": 1, 
+            "steps.tiltExtensor.rerunTiltGapFillingInExtensor": 1, 
+            "steps.tiltExtensor.separationYStripe": 20, 
+            "steps.tiltExtensor.thresholdKnotDistance": 40, 
+            "steps.tiltExtensor.widthYStripe": 40, 
+            "steps.tiltGapFiller.estimateResidualsThreshold": 0, 
+            "steps.tiltGapFiller.increaseDistanceThreshold": 10, 
+            "steps.tiltGapFiller.initialDistanceThreshold": 10, 
+            "steps.tiltGapFiller.maximalDistanceThreshold": 40, 
+            "steps.tiltGapFiller.maximumMarkersDefiningGap": 4, 
+            "steps.tiltGapFiller.minimumMarkersTargeted": 4, 
+            "steps.tiltGapFiller.minimumOccupancyContributingChain": 4, 
+            "steps.tiltGapFiller.residualsThreshold": 5, 
+            "steps.tiltGapFiller.targetedOccupancyContributingChain": 10, 
+            "steps.traceGapFiller.exclusionRadius": 30, 
+            "steps.traceGapFiller.fastCC": 1, 
+            "steps.traceGapFiller.maximalDeviationFromReprojection": 5, 
+            "steps.trimMarkers.maximalMedianResidualMarker": 10, 
+            "steps.trimMarkers.maximalResidualObservation": 5,
+            "steps.trimMarkers.minimumOccupancy": 15, 
+            "steps.trimMarkers.proximityDeletionThreshold": 80, 
+            "steps.trimMarkers.proximityFusionThreshold": 10
+        },
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # DynamoCleanStacks
 
@@ -600,14 +611,16 @@ The others are then removed from the tilt stacks for further processing.
 | citation_link         | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 | doi                   | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 
-`   "DynamoCleanStacks": {`  
-`       "execution_method": "parallel",`  
-`       "show_truncated_stacks": false,`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "DynamoCleanStacks": {
+        "execution_method": "parallel",
+        "show_truncated_stacks": false,
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # BatchRunTomo
 
@@ -665,117 +678,119 @@ fulfill all the steps batchruntomo normally can do:
 The value "<REPLACE>" means it will be automatically replaced by
 tomoBEAR and should not be replaced or changed by the user.
 
-`   "BatchRunTomo": {`  
-`       "execution_method": "parallel",`  
-`       "take_fiducials_from_dynamo": true,`  
-`       "generate_seed_model_with_all_fiducials_from_dynamo": true,`  
-`       "reconstruct_binned_stacks": false,`  
-`       "gold_erasing_extra_diameter": 30,`  
-`       "maximum_strip_width": 1000,`  
-`       "cpu_machine_list": "",`  
-`       "template_file": "configurations/batchruntomo-template.adoc",`  
-`       "directive_file_name": "DirectiveFile",`  
-`       "starting_step": 0,`  
-`       "ending_step": 21,`  
-`       "exit_on_error": true,`  
-`       "batchruntomo_description": "0: Setup`  
-`                1: Preprocessing`  
-`                2: Cross-correlation alignment`  
-`                3: Prealigned stack`  
-`                4: Patch tracking, autoseeding, or RAPTOR`  
-`                5: Bead tracking`  
-`                6: Alignment `  
-`                7: Positioning`  
-`                8: Aligned stack generation`  
-`                9: CTF plotting`  
-`                10: 3D gold detection`  
-`                11: CTF correction`  
-`                12: Gold erasing after transforming fiducial model or`  
-`                    projecting 3D model`  
-`                13: 2D filtering`  
-`                14: Reconstruction`  
-`                14.5: Postprocessing on a/b axis reconstruction`  
-`                15: Combine setup`  
-`                16: Solvematch`  
-`                17: Initial matchvol;`  
-`                18: Autopatchfit`  
-`                19: Volcombine`  
-`                20: Postprocessing with Trimvol`  
-`                21: NAD (Nonlinear anistropic diffusion)",`  
-`       "directives_description": {`  
-`           "path": "/home/local/imod_4.10.9/com/directives.csv"`  
-`       },`  
-`       "directives": {`  
-`           "setupset.copyarg.focus": 0,`  
-`           "setupset.copyarg.bfocus": 0,`  
-`           "setupset.copyarg.dual": 0,`  
-`           "setupset.copyarg.montage": 0,`  
-`           "runtime.Preprocessing.any.archiveOriginal": 0,`  
-`           "setupset.copyarg.pixel": "`<REPLACE>`",`  
-`           "setupset.copyarg.gold": "`<REPLACE>`",`  
-`           "setupset.copyarg.rotation": "`<REPLACE>`",`  
-`           "setupset.copyarg.userawtlt": 1,`  
-`           "setupset.copyarg.extract": 0,`  
-`           "setupset.copyarg.voltage": "`<REPLACE>`",`  
-`           "setupset.copyarg.Cs": "`<REPLACE>`",`  
-`           "setupset.copyarg.defocus": "`<REPLACE>`",`  
-`           "runtime.Preprocessing.any.removeXrays": 1,`  
-`           "comparam.eraser.ccderaser.LineObjects": 2,`  
-`           "comparam.eraser.ccderaser.BoundaryObjects": 3,`  
-`           "comparam.eraser.ccderaser.AllSectionObjects": "1-3",`  
-`           "comparam.prenewst.newstack.BinByFactor": "`<REPLACE>`",`  
-`           "runtime.RAPTOR.any.useAlignedStack": 1,`  
-`           "runtime.RAPTOR.any.numberOfMarkers": 50,`  
-`           "runtime.Fiducials.any.trackingMethod": 0,`  
-`           "runtime.Fiducials.any.seedingMethod": 1,`  
-`           "comparam.track.beadtrack.LightBeads": 0,`  
-`           "comparam.track.beadtrack.RoundsOfTracking": 5,`  
-`           "runtime.BeadTracking.any.numberOfRuns": 2,`  
-`           "comparam.track.beadtrack.SobelFilterCentering": 1,`  
-`           "comparam.track.beadtrack.KernelSigmaForSobel": 1.5,`  
-`           "comparam.autofidseed.autofidseed.TwoSurfaces": 0,`  
-`           "comparam.autofidseed.autofidseed.TargetNumberOfBeads": 20,`  
-`           "comparam.autofidseed.autofidseed.AdjustSizes": 1,`  
-`           "comparam.align.tiltalign.MagOption": 0,`  
-`           "comparam.align.tiltalign.TiltOption": 0,`  
-`           "comparam.align.tiltalign.RotOption": "-1",`  
-`           "comparam.align.tiltalign.XTiltOption": 0,`  
-`           "comparam.align.tiltalign.BeamTiltOption": 0,`  
-`           "comparam.newst.newstack.AntialiasFilter": -1,`  
-`           "runtime.AlignedStack.any.binByFactor": "`<REPLACE>`",`  
-`           "runtime.AlignedStack.any.correctCTF": 1,`  
-`           "runtime.AlignedStack.any.eraseGold": 2,`  
-`           "comparam.align.tiltalign.RobustFitting": 1,`  
-`           "comparam.tilt.tilt.THICKNESS": "`<REPLACE>`",`  
-`           "runtime.Reconstruction.any.useSirt": 0,`  
-`           "runtime.Reconstruction.any.doBackprojAlso": 1,`  
-`           "runtime.Postprocess.any.doTrimvol": 1,`  
-`           "runtime.Trimvol.any.reorient": 2,`  
-`           "runtime.Preprocessing.any.removeExcludedViews": 0,`  
-`           "setupset.copyarg.twodir": 0,`  
-`           "setupset.scanHeader": 0,`  
-`           "comparam.tilt.tilt.LOG": "",`  
-`           "comparam.tilt.tilt.SCALE": "0.0 1.0",`  
-`           "comparam.tilt.tilt.RADIAL": "0.5 0.0",`  
-`           "comparam.tilt.tilt.XAXISTILT": "0.0",`  
-`           "comparam.tilt.tilt.AdjustOrigin": 0,`  
-`           "comparam.align.tiltalign.AngleOffset": "0.0",`  
-`           "comparam.align.tiltalign.SeparateGroup": "`<REPLACE>`",`  
-`           "comparam.align.tiltalign.SurfacesToAnalyze": 1,`  
-`           "runtime.Positioning.any.centerOnGold": 1,`  
-`           "runtime.Positioning.any.sampleType": 0,`  
-`           "runtime.Positioning.any.wholeTomogram": 0,`  
-`           "runtime.Positioning.any.hasGoldBeads": 1,`  
-`           "comparam.xcorr.tiltxcorr.SearchMagChanges": 0,`  
-`           "comparam.align.tiltalign.LocalAlignments": 0,`  
-`           "runtime.GoldErasing.any.extraDiameter": "`<REPLACE>`",`  
-`           "runtime.GoldErasing.any.thickness": "`<REPLACE>`"`  
-`       },`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "BatchRunTomo": {
+        "execution_method": "parallel",
+        "take_fiducials_from_dynamo": true,
+        "generate_seed_model_with_all_fiducials_from_dynamo": true,
+        "reconstruct_binned_stacks": false,
+        "gold_erasing_extra_diameter": 30,
+        "maximum_strip_width": 1000,
+        "cpu_machine_list": "",
+        "template_file": "configurations/batchruntomo-template.adoc",
+        "directive_file_name": "DirectiveFile",
+        "starting_step": 0,
+        "ending_step": 21,
+        "exit_on_error": true,
+        "batchruntomo_description": "0: Setup
+                 1: Preprocessing
+                 2: Cross-correlation alignment
+                 3: Prealigned stack
+                 4: Patch tracking, autoseeding, or RAPTOR
+                 5: Bead tracking
+                 6: Alignment 
+                 7: Positioning
+                 8: Aligned stack generation
+                 9: CTF plotting
+                 10: 3D gold detection
+                 11: CTF correction
+                 12: Gold erasing after transforming fiducial model or
+                     projecting 3D model
+                 13: 2D filtering
+                 14: Reconstruction
+                 14.5: Postprocessing on a/b axis reconstruction
+                 15: Combine setup
+                 16: Solvematch
+                 17: Initial matchvol;
+                 18: Autopatchfit
+                 19: Volcombine
+                 20: Postprocessing with Trimvol
+                 21: NAD (Nonlinear anistropic diffusion)",
+        "directives_description": {
+            "path": "/home/local/imod_4.10.9/com/directives.csv"
+        },
+        "directives": {
+            "setupset.copyarg.focus": 0,
+            "setupset.copyarg.bfocus": 0,
+            "setupset.copyarg.dual": 0,
+            "setupset.copyarg.montage": 0,
+            "runtime.Preprocessing.any.archiveOriginal": 0,
+            "setupset.copyarg.pixel": "`<REPLACE>`",
+            "setupset.copyarg.gold": "`<REPLACE>`",
+            "setupset.copyarg.rotation": "`<REPLACE>`",
+            "setupset.copyarg.userawtlt": 1,
+            "setupset.copyarg.extract": 0,
+            "setupset.copyarg.voltage": "`<REPLACE>`",
+            "setupset.copyarg.Cs": "`<REPLACE>`",
+            "setupset.copyarg.defocus": "`<REPLACE>`",
+            "runtime.Preprocessing.any.removeXrays": 1,
+            "comparam.eraser.ccderaser.LineObjects": 2,
+            "comparam.eraser.ccderaser.BoundaryObjects": 3,
+            "comparam.eraser.ccderaser.AllSectionObjects": "1-3",
+            "comparam.prenewst.newstack.BinByFactor": "`<REPLACE>`",
+            "runtime.RAPTOR.any.useAlignedStack": 1,
+            "runtime.RAPTOR.any.numberOfMarkers": 50,
+            "runtime.Fiducials.any.trackingMethod": 0,
+            "runtime.Fiducials.any.seedingMethod": 1,
+            "comparam.track.beadtrack.LightBeads": 0,
+            "comparam.track.beadtrack.RoundsOfTracking": 5,
+            "runtime.BeadTracking.any.numberOfRuns": 2,
+            "comparam.track.beadtrack.SobelFilterCentering": 1,
+            "comparam.track.beadtrack.KernelSigmaForSobel": 1.5,
+            "comparam.autofidseed.autofidseed.TwoSurfaces": 0,
+            "comparam.autofidseed.autofidseed.TargetNumberOfBeads": 20,
+            "comparam.autofidseed.autofidseed.AdjustSizes": 1,
+            "comparam.align.tiltalign.MagOption": 0,
+            "comparam.align.tiltalign.TiltOption": 0,
+            "comparam.align.tiltalign.RotOption": "-1",
+            "comparam.align.tiltalign.XTiltOption": 0,
+            "comparam.align.tiltalign.BeamTiltOption": 0,
+            "comparam.newst.newstack.AntialiasFilter": -1,
+            "runtime.AlignedStack.any.binByFactor": "`<REPLACE>`",
+            "runtime.AlignedStack.any.correctCTF": 1,
+            "runtime.AlignedStack.any.eraseGold": 2,
+            "comparam.align.tiltalign.RobustFitting": 1,
+            "comparam.tilt.tilt.THICKNESS": "`<REPLACE>`",
+            "runtime.Reconstruction.any.useSirt": 0,
+            "runtime.Reconstruction.any.doBackprojAlso": 1,
+            "runtime.Postprocess.any.doTrimvol": 1,
+            "runtime.Trimvol.any.reorient": 2,
+            "runtime.Preprocessing.any.removeExcludedViews": 0,
+            "setupset.copyarg.twodir": 0,
+            "setupset.scanHeader": 0,
+            "comparam.tilt.tilt.LOG": "",
+            "comparam.tilt.tilt.SCALE": "0.0 1.0",
+            "comparam.tilt.tilt.RADIAL": "0.5 0.0",
+            "comparam.tilt.tilt.XAXISTILT": "0.0",
+            "comparam.tilt.tilt.AdjustOrigin": 0,
+            "comparam.align.tiltalign.AngleOffset": "0.0",
+            "comparam.align.tiltalign.SeparateGroup": "`<REPLACE>`",
+            "comparam.align.tiltalign.SurfacesToAnalyze": 1,
+            "runtime.Positioning.any.centerOnGold": 1,
+            "runtime.Positioning.any.sampleType": 0,
+            "runtime.Positioning.any.wholeTomogram": 0,
+            "runtime.Positioning.any.hasGoldBeads": 1,
+            "comparam.xcorr.tiltxcorr.SearchMagChanges": 0,
+            "comparam.align.tiltalign.LocalAlignments": 0,
+            "runtime.GoldErasing.any.extraDiameter": "`<REPLACE>`",
+            "runtime.GoldErasing.any.thickness": "`<REPLACE>`"
+        },
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # GCTFCtfphaseflipCTFCorrection
 
@@ -812,34 +827,36 @@ cropping.
 | citation_link                     | ""                   | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |          |
 | doi                               | ""                   | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |          |
 
-`   "GCTFCtfphaseflipCTFCorrection": {`  
-`       "execution_method": "parallel",`  
-`       "defocus_limit_factor": 2,`  
-`       "slice_suffix": "view",`  
-`       "slice_folder": "slices",`  
-`       "gctf_correction_log_file": "gctf.log",`  
-`       "ctf_correction_log_file": "ctf_correction.log",`  
-`       "exact_filter_suffix": "ef",`  
-`       "tomogram_suffix": "full",`  
-`       "rotated_tomogram_suffix": "rotx",`  
-`       "generate_exact_filtered_tomograms": true,`  
-`       "exact_filter_size": 1500,`  
-`       "reconstruction_thickness": 2000,`  
-`       "use_aligned_stack": false,`  
-`       "do_phase_flip": false,`  
-`       "run_ctf_phase_flip": false,`  
-`       "reconstruct_tomograms": false,`  
-`       "defocus_tolerance": 20,`  
-`       "iWidth": 2,`  
-`       "ampContrast": 0.1,`  
-`       "defocus_file_version": 3,`  
-`       "defocus_file_version_3_flag": 1,`  
-`       "use_rawtlt": true,`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "GCTFCtfphaseflipCTFCorrection": {
+        "execution_method": "parallel",
+        "defocus_limit_factor": 2,
+        "slice_suffix": "view",
+        "slice_folder": "slices",
+        "gctf_correction_log_file": "gctf.log",
+        "ctf_correction_log_file": "ctf_correction.log",
+        "exact_filter_suffix": "ef",
+        "tomogram_suffix": "full",
+        "rotated_tomogram_suffix": "rotx",
+        "generate_exact_filtered_tomograms": true,
+        "exact_filter_size": 1500,
+        "reconstruction_thickness": 2000,
+        "use_aligned_stack": false,
+        "do_phase_flip": false,
+        "run_ctf_phase_flip": false,
+        "reconstruct_tomograms": false,
+        "defocus_tolerance": 20,
+        "iWidth": 2,
+        "ampContrast": 0.1,
+        "defocus_file_version": 3,
+        "defocus_file_version_3_flag": 1,
+        "use_rawtlt": true,
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # BinStacks
 
@@ -862,20 +879,22 @@ your stacks are binned.
 | citation_link                   | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |          |
 | doi                             | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |          |
 
-`   "BinStacks":{`  
-`       "execution_method": "parallel",`  
-`       "use_ctf_corrected_aligned_stack": true,`  
-`       "antialias_filter": 6,`  
-`       "defocus_tolerance": 20,`  
-`       "iWidth": 2,`  
-`       "ampContrast": 0.1,`  
-`       "run_ctf_phaseflip": false,`  
-`       "ctf_corrected_stack_suffix": "ctfc",`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "BinStacks":{   
+        "execution_method": "parallel", 
+        "use_ctf_corrected_aligned_stack": true,    
+        "antialias_filter": 6,  
+        "defocus_tolerance": 20,    
+        "iWidth": 2,    
+        "ampContrast": 0.1, 
+        "run_ctf_phaseflip": false, 
+        "ctf_corrected_stack_suffix": "ctfc",   
+        "skip": false,  
+        "citation": "", 
+        "citation_link": "",    
+        "doi": ""   
+    }
+```
 
 # Reconstruct
 
@@ -898,18 +917,20 @@ set up the Reconstruct module properly.
 | citation_link                     | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 | doi                               | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 
-`   "Reconstruct": {`  
-`       "execution_method": "in_order",`  
-`       "use_ctf_corrected_stack": true,`  
-`       "generate_exact_filtered_tomograms": false,`  
-`       "exact_filter_size": 1500,`  
-`       "use_rawtlt": true,`  
-`       "correct_angles": "center",`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
+```json
+    "Reconstruct": {
+        "execution_method": "in_order",
+        "use_ctf_corrected_stack": true,
+        "generate_exact_filtered_tomograms": false,
+        "exact_filter_size": 1500,
+        "use_rawtlt": true,
+        "correct_angles": "center",
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 
 # DynamoImportTomograms
 
@@ -927,15 +948,16 @@ or pick in them particles by hand.
 | citation_link    | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 | doi              | ""            | this variable holds the information for automatically generating the citations, **note** functionality is not fully implemented and tested                                                                                                                                                                                                 |          |
 
-`   "DynamoImportTomograms": {`  
-`       "execution_method": "once",`  
-`       "import_tomograms": "both",`  
-`       "skip": false,`  
-`       "citation": "",`  
-`       "citation_link": "",`  
-`       "doi": ""`  
-`   }`
-
+```json
+    "DynamoImportTomograms": {
+        "execution_method": "once",
+        "import_tomograms": "both",
+        "skip": false,
+        "citation": "",
+        "citation_link": "",
+        "doi": ""
+    }
+```
 # EMDTemplateGeneration
 
 The EMDTemplateGeneration module is used to automatically download a
@@ -944,44 +966,48 @@ matching binning. Besides that an automated routine to generate the mask
 is also implemented. This module needs to be run before template
 matching is executed.
 
-`   "EMDTemplateGeneration": {`  
-`       "execution_method": "once",`  
-`       "template_emd_number": "",`  
-`       "mask_bandpass": [0, 2, 2],`  
-`       "template_bandpass_cut_on_fourier_pixel": 2,`  
-`       "template_bandpass_cut_off_resolution_in_angstrom": 20,`  
-`       "template_bandpass_smoothing_pixels": 3,`  
-`       "ratio_mask_pixels_based_on_unbinned_pixels": 0.05,`  
-`       "use_half_template_size": false,`  
-`       "mask_cut_off": 0.05,`  
-`       "template_cut_off": 0.75,`  
-`       "type": "dynamo",`  
-`       "use_bandpassed_template": true,`  
-`       "use_smoothed_mask": true,`  
-`       "dark_density": true,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+`   "EMDTemplateGeneration": {
+`       "execution_method": "once",
+`       "template_emd_number": "",
+`       "mask_bandpass": [0, 2, 2],
+`       "template_bandpass_cut_on_fourier_pixel": 2,
+`       "template_bandpass_cut_off_resolution_in_angstrom": 20,
+`       "template_bandpass_smoothing_pixels": 3,
+`       "ratio_mask_pixels_based_on_unbinned_pixels": 0.05,
+`       "use_half_template_size": false,
+`       "mask_cut_off": 0.05,
+`       "template_cut_off": 0.75,
+`       "type": "dynamo",
+`       "use_bandpassed_template": true,
+`       "use_smoothed_mask": true,
+`       "dark_density": true,
+`       "skip": false,
+`       "citation": ""
+    }
+```
 
 # TemplateGenerationFromFile
 
-`   "TemplateGenerationFromFile": {`  
-`       "execution_method": "once",`  
-`       "template_path": "",`  
-`       "mask_path": "",`  
-`       "use_ellipsoid": true,`  
-`       "radii_ratio": [0.33, 0.33, 0.5],`  
-`       "ellipsoid_smoothing_ratio": 0.16,`  
-`       "mask_bandpass": [0, 2, 2],`  
-`       "template_bandpass_cut_on_fourier_pixel": 2,`  
-`       "template_bandpass_cut_off_resolution_in_angstrom": 20,`  
-`       "template_bandpass_smoothing_pixels": 3,`  
-`       "use_bandpassed_template": true,`  
-`       "use_smoothed_mask": true,`  
-`       "invert_density": true,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+    "TemplateGenerationFromFile": {
+        "execution_method": "once",
+        "template_path": "",
+        "mask_path": "",
+        "use_ellipsoid": true,
+        "radii_ratio": [0.33, 0.33, 0.5],
+        "ellipsoid_smoothing_ratio": 0.16,
+        "mask_bandpass": [0, 2, 2],
+        "template_bandpass_cut_on_fourier_pixel": 2,
+        "template_bandpass_cut_off_resolution_in_angstrom": 20,
+        "template_bandpass_smoothing_pixels": 3,
+        "use_bandpassed_template": true,
+        "use_smoothed_mask": true,
+        "invert_density": true,
+        "skip": false,
+        "citation": ""
+    }
+```
 
 # DynamoTemplateMatching
 
@@ -990,149 +1016,155 @@ matching from dynamo but on a GPU. Because of the GPU usage the whole
 thing runs up to 15 times faster than the normal template matching
 implementation of dynamo.
 
-`   "DynamoTemplateMatching": {`  
-`       "execution_method": "in_order",`  
-`       "use_ctf_corrected_tomograms": true,`  
-`       "show_table": false,`  
-`       "show_cross_correlations": false,`  
-`       "show_generated_template": false,`  
-`       "randomize_angles": false,`  
-`       "size_of_chunk": [512, 720, 500],`  
-`       "auto_detect_sampling": false,`  
-`       "auto_detect_sampling_multiplication_factor": 5,`  
-`       "cone_range": 360,`  
-`       "cone_sampling": 15,`  
-`       "matlab_workers": 1,`  
-`       "symmetry_opearator": 19,`  
-`       "template_transform": "none",`  
-`       "in_plane_range": 360,`  
-`       "in_plane_sampling": 7.5,`  
-`       "sampling": 0,`  
-`       "threshold_standard_deviation": 3,`  
-`       "ellipsoid_smoothing_pixels": 5,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+    "DynamoTemplateMatching": {
+        "execution_method": "in_order",
+        "use_ctf_corrected_tomograms": true,
+        "show_table": false,
+        "show_cross_correlations": false,
+        "show_generated_template": false,
+        "randomize_angles": false,
+        "size_of_chunk": [512, 720, 500],
+        "auto_detect_sampling": false,
+        "auto_detect_sampling_multiplication_factor": 5,
+        "cone_range": 360,
+        "cone_sampling": 15,
+        "matlab_workers": 1,
+        "symmetry_opearator": 19,
+        "template_transform": "none",
+        "in_plane_range": 360,
+        "in_plane_sampling": 7.5,
+        "sampling": 0,
+        "threshold_standard_deviation": 3,
+        "ellipsoid_smoothing_pixels": 5,
+        "skip": false,
+        "citation": ""
+    }
+```
 
 # TemplateMatchingPostProcessing
 
-`   "TemplateMatchingPostProcessing": {`  
-`       "execution_method": "once",`  
-`       "parallel_execution": false,`  
-`       "checkpoint_module": true,`  
-`       "all_in_one_folder": true,`  
-`       "particle_count": 0,`  
-`       "cc_std": 3,`  
-`       "crop_particles": false,`  
-`       "bandpass_cc_volume": false,`  
-`       "bandpass_cc_high_pass": 0,`  
-`       "bandpass_cc_low_pass": 0,`  
-`       "bandpass_cc_smoothing": 0,`  
-`       "keep_binned": true,`  
-`       "keep_unbinned": true,`  
-`       "mask_gaussian_fall_off": false,`  
-`       "precision": 4,`  
-`       "cross_correlation_mask": false,`  
-`       "remove_large_correlation_clusters": false,`  
-`       "use_mask_for_cluster_removal": false,`  
-`       "cluster_std":2,`  
-`       "mask_non_zero_voxels_ratio": 1.5,`  
-`       "non_zero_voxels_threshold": 0.05,`  
-`       "exclusion_radius_box_size_ratio": 0.5,`  
-`       "box_size": 1,`  
-`       "keep_binned": false,`  
-`       "keep_unbinned": true,`  
-`       "skip": false,`  
-`       "citation": ""`  
-`   }`
+```json
+    "TemplateMatchingPostProcessing": {
+        "execution_method": "once",
+        "parallel_execution": false,
+        "checkpoint_module": true,
+        "all_in_one_folder": true,
+        "particle_count": 0,
+        "cc_std": 3,
+        "crop_particles": false,
+        "bandpass_cc_volume": false,
+        "bandpass_cc_high_pass": 0,
+        "bandpass_cc_low_pass": 0,
+        "bandpass_cc_smoothing": 0,
+        "keep_binned": true,
+        "keep_unbinned": true,
+        "mask_gaussian_fall_off": false,
+        "precision": 4,
+        "cross_correlation_mask": false,
+        "remove_large_correlation_clusters": false,
+        "use_mask_for_cluster_removal": false,
+        "cluster_std":2,
+        "mask_non_zero_voxels_ratio": 1.5,
+        "non_zero_voxels_threshold": 0.05,
+        "exclusion_radius_box_size_ratio": 0.5,
+        "box_size": 1,
+        "keep_binned": false,
+        "keep_unbinned": true,
+        "skip": false,
+        "citation": ""
+    }
+```
 
 # DynamoAlignmentProject
 
-`   "DynamoAlignmentProject": {`  
-`       "checkpoint_module": true,`  
-`       "noise": 1,`  
-`       "noise_scaling_factor": 0.7,`  
-`       "use_noise_classes": true,`  
-`       "susan_lowpass": 65,`  
-`       "dynamo_lowpass_factor": 0.5,`  
-`       "susan_padding": 200,`  
-`       "susan_box_size": 400,`  
-`       "per_particle_ctf_correction": "phase_flip",`  
-`       "padding_policy": "noise",`  
-`       "normalization": "zm",`  
-`       "use_symmetrie": true,`  
-`       "execution_method": "once",`  
-`       "reference": "average",`  
-`       "iterations": 0,`  
-`       "swap_particles": true,`  
-`       "refine_factor": 2,`  
-`       "show_results": false,`  
-`       "last_classification_binning":4,`  
-`       "projects_per_binning": 2,`  
-`       "alignment_method": "mra",`  
-`       "parallel_execution": true,`  
-`       "use_elliptic_mask": true,`  
-`       "radii_ratio": [0.5, 0.5, 0.5],`  
-`       "ellipsoid_smoothing_ratio": 0.16,`  
-`       "shift_limit_factor": 0.1,`  
-`       "discretization_bias": 0.33,`  
-`       "project_name": "mraProject",`  
-`       "destination": "matlab_gpu",`  
-`       "classes": 0,`  
-`       "selected_classes": [],`  
-`       "sampling": 0,`  
-`       "ite_r1": 0,    `  
-`       "nref_r1": 0,      `  
-`       "cone_range_r1": 0,    `  
-`       "cone_sampling_r1": 0,     `  
-`       "cone_flip_r1": 0,     `  
-`       "cone_check_peak_r1": 0,  `  
-`       "cone_freeze_reference_r1": 0,`  
-`       "inplane_range_r1": 0,     `  
-`       "inplane_sampling_r1": 0,     `  
-`       "inplane_flip_r1": 0,                       `  
-`       "inplane_check_peak_r1": 0,        `  
-`       "inplane_freeze_reference_r1": 0,       `  
-`       "refine_r1": 0,       `  
-`       "refine_factor_r1": 0,  `  
-`       "high_r1": 0,           `  
-`       "low_r1": 0,     `  
-`       "sym_r1": 0,                                `  
-`       "dim_r1": 0,                                `  
-`       "area_search_r1": 0,`  
-`       "area_search_modus_r1": 0,                  `  
-`       "separation_in_tomogram_r1": 0,             `  
-`       "limit_xy_check_peak_r1": 0,                `  
-`       "limit_z_check_peak_r1": 0,                 `  
-`       "use_CC_r1": 0,                             `  
-`       "localnc_r1": 0,                            `  
-`       "mra_r1": 0,                                `  
-`       "threshold_r1": 0,                          `  
-`       "threshold_modus_r1": 0,                    `  
-`       "threshold2_r1": 0,                         `  
-`       "threshold2_modus_r1": 0,                   `  
-`       "ccmatrix_r1": 0,     `  
-`       "ccmatrix_type_r1": 0,                      `  
-`       "ccmatrix_batch_r1": 0,                     `  
-`       "Xmatrix_r1": 0,                            `  
-`       "Xmatrix_maxMb_r1": 0,                      `  
-`       "PCA_r1": 0,                                `  
-`       "PCA_neigs_r1": 0,                          `  
-`       "kmeans_r1": "",                             `  
-`       "kmeans_ncluster_r1": 0,                    `  
-`       "kmeans_ncoefficients_r1": 0,               `  
-`       "nclass_r1": 0,                             `  
-`       "plugin_align_r1": 0,                       `  
-`       "plugin_post_r1": 0,                        `  
-`       "plugin_iter_r1": 0,                        `  
-`       "plugin_align_order_r1": 0,                 `  
-`       "plugin_post_order_r1": 0,                  `  
-`       "plugin_iter_order_r1": 0,                  `  
-`       "flags_r1": 0,                              `  
-`       "convergence_type_r1": 0,                   `  
-`       "convergence_r1": 0,                        `  
-`       "rings_r1": 0,                              `  
-`       "rings_random_r1": 0,                       `  
-`       "dynamic_mask_r1": 0,`  
-`       "citation": ""`  
-`   }`
+```json
+    "DynamoAlignmentProject": {
+        "checkpoint_module": true,
+        "noise": 1,
+        "noise_scaling_factor": 0.7,
+        "use_noise_classes": true,
+        "susan_lowpass": 65,
+        "dynamo_lowpass_factor": 0.5,
+        "susan_padding": 200,
+        "susan_box_size": 400,
+        "per_particle_ctf_correction": "phase_flip",
+        "padding_policy": "noise",
+        "normalization": "zm",
+        "use_symmetrie": true,
+        "execution_method": "once",
+        "reference": "average",
+        "iterations": 0,
+        "swap_particles": true,
+        "refine_factor": 2,
+        "show_results": false,
+        "last_classification_binning":4,
+        "projects_per_binning": 2,
+        "alignment_method": "mra",
+        "parallel_execution": true,
+        "use_elliptic_mask": true,
+        "radii_ratio": [0.5, 0.5, 0.5],
+        "ellipsoid_smoothing_ratio": 0.16,
+        "shift_limit_factor": 0.1,
+        "discretization_bias": 0.33,
+        "project_name": "mraProject",
+        "destination": "matlab_gpu",
+        "classes": 0,
+        "selected_classes": [],
+        "sampling": 0,
+        "ite_r1": 0,    
+        "nref_r1": 0,      
+        "cone_range_r1": 0,    
+        "cone_sampling_r1": 0,     
+        "cone_flip_r1": 0,     
+        "cone_check_peak_r1": 0,  
+        "cone_freeze_reference_r1": 0,
+        "inplane_range_r1": 0,     
+        "inplane_sampling_r1": 0,     
+        "inplane_flip_r1": 0,                       
+        "inplane_check_peak_r1": 0,        
+        "inplane_freeze_reference_r1": 0,       
+        "refine_r1": 0,       
+        "refine_factor_r1": 0,  
+        "high_r1": 0,           
+        "low_r1": 0,     
+        "sym_r1": 0,                                
+        "dim_r1": 0,                                
+        "area_search_r1": 0,
+        "area_search_modus_r1": 0,                  
+        "separation_in_tomogram_r1": 0,             
+        "limit_xy_check_peak_r1": 0,                
+        "limit_z_check_peak_r1": 0,                 
+        "use_CC_r1": 0,                             
+        "localnc_r1": 0,                            
+        "mra_r1": 0,                                
+        "threshold_r1": 0,                          
+        "threshold_modus_r1": 0,                    
+        "threshold2_r1": 0,                         
+        "threshold2_modus_r1": 0,                   
+        "ccmatrix_r1": 0,     
+        "ccmatrix_type_r1": 0,                      
+        "ccmatrix_batch_r1": 0,                     
+        "Xmatrix_r1": 0,                            
+        "Xmatrix_maxMb_r1": 0,                      
+        "PCA_r1": 0,                                
+        "PCA_neigs_r1": 0,                          
+        "kmeans_r1": "",                             
+        "kmeans_ncluster_r1": 0,                    
+        "kmeans_ncoefficients_r1": 0,               
+        "nclass_r1": 0,                             
+        "plugin_align_r1": 0,                       
+        "plugin_post_r1": 0,                        
+        "plugin_iter_r1": 0,                        
+        "plugin_align_order_r1": 0,                 
+        "plugin_post_order_r1": 0,                  
+        "plugin_iter_order_r1": 0,                  
+        "flags_r1": 0,                              
+        "convergence_type_r1": 0,                   
+        "convergence_r1": 0,                        
+        "rings_r1": 0,                              
+        "rings_random_r1": 0,                       
+        "dynamic_mask_r1": 0,
+        "citation": ""
+    }
+```
