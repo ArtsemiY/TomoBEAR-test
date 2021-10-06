@@ -11,142 +11,147 @@ be used as configuration for the pipeline. For some projects there are
 more sophisticted features available which can be switched on or fine
 tuned if needed.
 
-`   {`  
-`       "general": {`  
-`           "project_name": "your project name",`  
-`           "project_description": "your project name description",`  
-`           "data_path": "/path/to/data/prefix*.mrc",`  
-`           "processing_path": "/path/to/processing/folder",`  
-`           "expected_symmetrie": "Cx",`  
-`           "template_matching_binning": xx,`  
-`           "gold_bead_size_in_nm": xx,`  
-`           "reconstruction_thickness": xxxx,`  
-`           "rotation_tilt_axis": xx,`  
-`           "aligned_stack_binning": x,`  
-`           "pre_aligned_stack_binning": x`  
-`           "binnings": [x, x, xx]`  
-`       },`  
-`       "MetaData": {`  
-`       },`  
-`       "SortFiles": {`  
-`       },`  
-`       "MotionCor2": {`  
-`       },`  
-`       "CreateStacks": {`  
-`       },`  
-`       "DynamoTiltSeriesAlignment": {`  
-`       },`  
-`       "DynamoCleanStacks": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "skip_steps": [4],`  
-`           "ending_step": 6`  
-`       },`  
-`       "StopPipeline": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 8,`  
-`           "ending_step": 8`  
-`       },`  
-`       "GCTFCtfphaseflipCTFCorrection": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 10,`  
-`           "ending_step": 13`  
-`       },`  
-`       "BinStacks": {`  
-`       },`  
-`       "Reconstruct": {`  
-`           "reconstruct": "binned"`  
-`       },`  
-`       "DynamoImportTomograms": {`  
-`       },`  
-`       "EMDTemplateGeneration": {`  
-`           "template_emd_number": "xxxx",`  
-`           "template_bandpass_cut_off_resolution_in_angstrom": 20`  
-`       },`  
-`       "DynamoTemplateMatching": {`  
-`           "size_of_chunk": [512, 720, 500],`  
-`           "sampling": 15`  
-`       },`  
-`       "TemplateMatchingPostProcessing": {`  
-`           "parallel_execution": false,`  
-`           "cc_std": 2.5,`  
-`           "crop_particles": true`  
-`       }`  
-`   }`
+```json
+    {
+        "general": {
+            "project_name": "your project name",
+            "project_description": "your project name description",
+            "data_path": "/path/to/data/prefix*.mrc",
+            "processing_path": "/path/to/processing/folder",
+            "expected_symmetrie": "Cx",
+            "template_matching_binning": xx,
+            "gold_bead_size_in_nm": xx,
+            "reconstruction_thickness": xxxx,
+            "rotation_tilt_axis": xx,
+            "aligned_stack_binning": x,
+            "pre_aligned_stack_binning": x
+            "binnings": [x, x, xx]
+        },
+        "MetaData": {
+        },
+        "SortFiles": {
+        },
+        "MotionCor2": {
+        },
+        "CreateStacks": {
+        },
+        "DynamoTiltSeriesAlignment": {
+        },
+        "DynamoCleanStacks": {
+        },
+        "BatchRunTomo": {
+            "skip_steps": [4],
+            "ending_step": 6
+        },
+        "StopPipeline": {
+        },
+        "BatchRunTomo": {
+            "starting_step": 8,
+            "ending_step": 8
+        },
+        "GCTFCtfphaseflipCTFCorrection": {
+        },
+        "BatchRunTomo": {
+            "starting_step": 10,
+            "ending_step": 13
+        },
+        "BinStacks": {
+        },
+        "Reconstruct": {
+            "reconstruct": "binned"
+        },
+        "DynamoImportTomograms": {
+        },
+        "EMDTemplateGeneration": {
+            "template_emd_number": "xxxx",
+            "template_bandpass_cut_off_resolution_in_angstrom": 20
+        },
+        "DynamoTemplateMatching": {
+            "size_of_chunk": [512, 720, 500],
+            "sampling": 15
+        },
+        "TemplateMatchingPostProcessing": {
+            "parallel_execution": false,
+            "cc_std": 2.5,
+            "crop_particles": true
+        }
+    }
+```
 
 ## Raw Tomography Data without Fiducials
 
 Focuse Ion-beam Milling Tomography Data
 
-`   {`  
-`       "general": {`  
-`           "project_name": "fibmil project",`  
-`           "project_description": "fibmil project description",`  
-`           "data_path": "/path/to/data/prefix*.tif",`  
-`           "processing_path": "/path/to/processing/folder",`  
-`           "gain": "/path/to/gain.mrc",`  
-`           "dark": "/path/to/dark.mrc",`  
-`           "expected_symmetrie": "Cx",`  
-`           "template_matching_binning": xx,`  
-`           "reconstruction_thickness": xxxx,`  
-`           "rotation_tilt_axis": xx,`  
-`           "aligned_stack_binning": x,`  
-`           "pre_aligned_stack_binning": x,`  
-`           "binnings": [x, x, xx],`  
-`           "tilt_scheme": "bi_directional",`  
-`           "tilt_angles": [-9, -6, -3, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, -12, -15, -18, -21, -24, -27, -30, -33, -36, -39, -42, -45, -48, -51, -54, -57, -60]`  
-`       },`  
-`       "MetaData": {`  
-`       },`  
-`       "SortFiles": {`  
-`       },`  
-`       "MotionCor2": {`  
-`       },`  
-`       "CreateStacks": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 0,`  
-`           "ending_step": 8,`  
-`           "directives": {`  
-`               "runtime.Fiducials.any.trackingMethod": 1,`  
-`               "comparam.xcorr_pt.tiltxcorr.SizeOfPatchesXandY": "512,512",`  
-`               "comparam.xcorr_pt.tiltxcorr.IterateCorrelations": 100,`  
-`               "runtime.PatchTracking.any.adjustTiltAngles": 0,`  
-`               "runtime.AlignedStack.any.eraseGold": 0,`  
-`               "runtime.Positioning.any.hasGoldBeads": 0,`  
-`               "comparam.xcorr_pt.tiltxcorr.FilterRadius2": 0.3,`  
-`               "comparam.xcorr_pt.tiltxcorr.FilterSigma2": 0.4,`  
-`               "comparam.xcorr_pt.tiltxcorr.OverlapOfPatchesXandY": "0.5,0.5"`  
-`           }`  
-`       },`  
-`       "GCTFCtfphaseflipCTFCorrection": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 10,`  
-`           "ending_step": 13`  
-`       },`  
-`       "BinStacks": {`  
-`       },`  
-`       "Reconstruct": {`  
-`           "reconstruct": "binned"`  
-`       },`  
-`       "StopPipeline": {`  
-`       },`  
-`       "DynamoImportTomograms": {`  
-`       },`  
-`       "EMDTemplateGeneration": {`  
-`           "template_emd_number": "xxxx",`  
-`           "template_bandpass_cut_off_resolution_in_angstrom": 20`  
-`       },`  
-`       "DynamoTemplateMatching": {`  
-`           "sampling": 15`  
-`       },`  
-`       "TemplateMatchingPostProcessing": {`  
-`           "cc_std": 2.5,`  
-`           "crop_particles": true`  
-`       }`
+```json
+    {
+        "general": {
+            "project_name": "fibmil project",
+            "project_description": "fibmil project description",
+            "data_path": "/path/to/data/prefix*.tif",
+            "processing_path": "/path/to/processing/folder",
+            "gain": "/path/to/gain.mrc",
+            "dark": "/path/to/dark.mrc",
+            "expected_symmetrie": "Cx",
+            "template_matching_binning": xx,
+            "reconstruction_thickness": xxxx,
+            "rotation_tilt_axis": xx,
+            "aligned_stack_binning": x,
+            "pre_aligned_stack_binning": x,
+            "binnings": [x, x, xx],
+            "tilt_scheme": "bi_directional",
+            "tilt_angles": [-9, -6, -3, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, -12, -15, -18, -21, -24, -27, -3033, -36, -39, -42, -45, -48, -51, -54, -57, -60]
+        },
+        "MetaData": {
+        },
+        "SortFiles": {
+        },
+        "MotionCor2": {
+        },
+        "CreateStacks": {
+        },
+        "BatchRunTomo": {
+            "starting_step": 0,
+            "ending_step": 8,
+            "directives": {
+                "runtime.Fiducials.any.trackingMethod": 1,
+                "comparam.xcorr_pt.tiltxcorr.SizeOfPatchesXandY": "512,512",
+                "comparam.xcorr_pt.tiltxcorr.IterateCorrelations": 100,
+                "runtime.PatchTracking.any.adjustTiltAngles": 0,
+                "runtime.AlignedStack.any.eraseGold": 0,
+                "runtime.Positioning.any.hasGoldBeads": 0,
+                "comparam.xcorr_pt.tiltxcorr.FilterRadius2": 0.3,
+                "comparam.xcorr_pt.tiltxcorr.FilterSigma2": 0.4,
+                "comparam.xcorr_pt.tiltxcorr.OverlapOfPatchesXandY": "0.5,0.5"
+            }
+        },
+        "GCTFCtfphaseflipCTFCorrection": {
+        },
+        "BatchRunTomo": {
+            "starting_step": 10,
+            "ending_step": 13
+        },
+        "BinStacks": {
+        },
+        "Reconstruct": {
+            "reconstruct": "binned"
+        },
+        "StopPipeline": {
+        },
+        "DynamoImportTomograms": {
+        },
+        "EMDTemplateGeneration": {
+            "template_emd_number": "xxxx",
+            "template_bandpass_cut_off_resolution_in_angstrom": 20
+        },
+        "DynamoTemplateMatching": {
+            "sampling": 15
+        },
+        "TemplateMatchingPostProcessing": {
+            "cc_std": 2.5,
+            "crop_particles": true
+        }
+    }
+```
 
 # Tilt Stacks with Fiducials
 
@@ -154,193 +159,131 @@ If you want to process already assembled tilt stacks with tomoBEAR you
 need to provide the tilt angles in the order in which they apear in the
 tilt stacks.
 
-`   {`  
-`       "general": {`  
-`           "project_name": "Ribosome",`  
-`           "project_description": "Ribosome Benchmark",`  
-`           "data_path": "/sbdata/PTMP/nibalysc/ribosome/data/*.mrc",`  
-`           "processing_path": "/sbdata/PTMP/nibalysc/ribosome",`  
-`           "expected_symmetrie": "C1",`  
-`           "tilt_scheme": "bi_directional",`  
-`           "apix": 2.62,`  
-`           "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],`  
-`           "gold_bead_size_in_nm": 9`  
-`   `  
-`       },`  
-`       "MetaData": {`  
-`       },`  
-`       "CreateStacks": {`  
-`           "execution_method": "sequential"`  
-`       },`  
-`       "DynamoTiltSeriesAlignment": {`  
-`           "execution_method": "sequential"`  
-`       },`  
-`       "DynamoCleanStacks": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "skip_steps": [4],`  
-`           "ending_step": 6`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 8,`  
-`           "ending_step": 8`  
-`       },`  
-`       "GCTFCtfphaseflipCTFCorrection": {`  
-`       },`  
-`       "BatchRunTomo": {`  
-`           "starting_step": 10,`  
-`           "ending_step": 13`  
-`       },`  
-`       "BinStacks": {`  
-`       },`  
-`       "Reconstruct": {`  
-`       },`  
-`       "DynamoImportTomograms": {`  
-`       },`  
-`       "EMDTemplateGeneration": {`  
-`           "template_emd_number": "3420"`  
-`       },`  
-`       "DynamoTemplateMatching": {`  
-`       },`  
-`       "TemplateMatchingPostProcessing": {`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "iterations": 3,`  
-`           "classes": 4,`  
-`           "use_symmetrie": false,`  
-`           "use_noise_classes": true`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "iterations": 3,`  
-`           "classes": 4,`  
-`           "use_noise_classes": true,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1]`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "iterations": 3,`  
-`           "classes": 4,`  
-`           "use_noise_classes": true,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1]`  
-`       },`  
-`       "BinStacks": {`  
-`           "use_ctf_corrected_aligned_stack": false,`  
-`           "binnings": [2, 4, 8]`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "classes": 1,`  
-`           "iterations": 1,`  
-`           "use_noise_classes": false,`  
-`           "swap_particles": false,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1],`  
-`           "as_boxes": true,`  
-`           "use_SUSAN": true,`  
-`           "binning": 8,`  
-`           "threshold":0.75,`  
-`           "rf_r1": 1,       `  
-`           "rff_r1": 2,`  
-`           "rf_r2": 1,       `  
-`           "rff_r2": 2,`  
-`           "rf_r3": 1,       `  
-`           "rff_r3": 2,  `  
-`           "rf_r4": 1,       `  
-`           "rff_r4": 2,`  
-`           "rf_r5": 1,       `  
-`           "rff_r5": 2,`  
-`           "rf_r6": 1,       `  
-`           "rff_r6": 2,`  
-`           "rf_r7": 1,       `  
-`           "rff_r7": 2,  `  
-`           "rf_r8": 1,       `  
-`           "rff_r8": 2`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "classes": 1,`  
-`           "iterations": 1,`  
-`           "use_noise_classes": false,`  
-`           "swap_particles": false,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1,2],`  
-`           "as_boxes": true,`  
-`           "use_SUSAN": true,`  
-`           "binning": 4,`  
-`           "threshold":0.75,`  
-`           "rf_r1": 1,       `  
-`           "rff_r1": 2,`  
-`           "rf_r2": 1,       `  
-`           "rff_r2": 2,`  
-`           "rf_r3": 1,       `  
-`           "rff_r3": 2,  `  
-`           "rf_r4": 1,       `  
-`           "rff_r4": 2,`  
-`           "rf_r5": 1,       `  
-`           "rff_r5": 2,`  
-`           "rf_r6": 1,       `  
-`           "rff_r6": 2,`  
-`           "rf_r7": 1,       `  
-`           "rff_r7": 2,  `  
-`           "rf_r8": 1,       `  
-`           "rff_r8": 2`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "classes": 1,`  
-`           "iterations": 1,`  
-`           "use_noise_classes": false,`  
-`           "swap_particles": false,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1,2],`  
-`           "as_boxes": true,`  
-`           "use_SUSAN": true,`  
-`           "binning": 2,`  
-`           "threshold":0.75,`  
-`           "rf_r1": 1,       `  
-`           "rff_r1": 2,`  
-`           "rf_r2": 1,       `  
-`           "rff_r2": 2,`  
-`           "rf_r3": 1,       `  
-`           "rff_r3": 2,  `  
-`           "rf_r4": 1,       `  
-`           "rff_r4": 2,`  
-`           "rf_r5": 1,       `  
-`           "rff_r5": 2,`  
-`           "rf_r6": 1,       `  
-`           "rff_r6": 2,`  
-`           "rf_r7": 1,       `  
-`           "rff_r7": 2,  `  
-`           "rf_r8": 1,       `  
-`           "rff_r8": 2`  
-`       },`  
-`       "DynamoAlignmentProject": {`  
-`           "classes": 1,`  
-`           "iterations": 1,`  
-`           "use_noise_classes": false,`  
-`           "swap_particles": false,`  
-`           "use_symmetrie": false,`  
-`           "selected_classes": [1,2],`  
-`           "as_boxes": true,`  
-`           "use_SUSAN": true,`  
-`           "binning": 1,`  
-`           "threshold":0.75,`  
-`           "rf_r1": 1,       `  
-`           "rff_r1": 2,`  
-`           "rf_r2": 1,       `  
-`           "rff_r2": 2,`  
-`           "rf_r3": 1,       `  
-`           "rff_r3": 2,  `  
-`           "rf_r4": 1,       `  
-`           "rff_r4": 2,`  
-`           "rf_r5": 1,       `  
-`           "rff_r5": 2,`  
-`           "rf_r6": 1,       `  
-`           "rff_r6": 2,`  
-`           "rf_r7": 1,       `  
-`           "rff_r7": 2,  `  
-`           "rf_r8": 1,       `  
-`           "rff_r8": 2`  
-`       }`  
-`   }`
+```json
+    {
+        "general": {
+            "project_name": "Ribosome",
+            "project_description": "Ribosome Benchmark",
+            "data_path": "/sbdata/PTMP/nibalysc/ribosome/data/*.mrc",
+            "processing_path": "/sbdata/PTMP/nibalysc/ribosome",
+            "expected_symmetrie": "C1",
+            "tilt_scheme": "bi_directional",
+            "apix": 2.62,
+            "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.024.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 0, 24.0, 26. , 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],
+            "gold_bead_size_in_nm": 9
+    
+        },
+        "MetaData": {
+        },
+        "CreateStacks": {
+            "execution_method": "sequential"
+        },
+        "DynamoTiltSeriesAlignment": {
+            "execution_method": "sequential"
+        },
+        "DynamoCleanStacks": {
+        },
+        "BatchRunTomo": {
+            "skip_steps": [4],
+            "ending_step": 6
+        },
+        "BatchRunTomo": {
+            "starting_step": 8,
+            "ending_step": 8
+        },
+        "GCTFCtfphaseflipCTFCorrection": {
+        },
+        "BatchRunTomo": {
+            "starting_step": 10,
+            "ending_step": 13
+        },
+        "BinStacks": {
+        },
+        "Reconstruct": {
+        },
+        "DynamoImportTomograms": {
+        },
+        "EMDTemplateGeneration": {
+            "template_emd_number": "3420"
+        },
+        "DynamoTemplateMatching": {
+        },
+        "TemplateMatchingPostProcessing": {
+        },
+        "DynamoAlignmentProject": {
+            "iterations": 3,
+            "classes": 4,
+            "use_symmetrie": false,
+            "use_noise_classes": true
+        },
+        "DynamoAlignmentProject": {
+            "iterations": 3,
+            "classes": 4,
+            "use_noise_classes": true,
+            "use_symmetrie": false,
+            "selected_classes": [1]
+        },
+        "DynamoAlignmentProject": {
+            "iterations": 3,
+            "classes": 4,
+            "use_noise_classes": true,
+            "use_symmetrie": false,
+            "selected_classes": [1]
+        },
+        "BinStacks": {
+            "use_ctf_corrected_aligned_stack": false,
+            "binnings": [2, 4, 8]
+        },
+        "DynamoAlignmentProject": {
+            "classes": 1,
+            "iterations": 1,
+            "use_noise_classes": false,
+            "swap_particles": false,
+            "use_symmetrie": false,
+            "selected_classes": [1],
+            "as_boxes": true,
+            "use_SUSAN": true,
+            "binning": 8,
+            "threshold":0.75
+        },
+        "DynamoAlignmentProject": {
+            "classes": 1,
+            "iterations": 1,
+            "use_noise_classes": false,
+            "swap_particles": false,
+            "use_symmetrie": false,
+            "selected_classes": [1,2],
+            "as_boxes": true,
+            "use_SUSAN": true,
+            "binning": 4,
+            "threshold":0.75
+        },
+        "DynamoAlignmentProject": {
+            "classes": 1,
+            "iterations": 1,
+            "use_noise_classes": false,
+            "swap_particles": false,
+            "use_symmetrie": false,
+            "selected_classes": [1,2],
+            "as_boxes": true,
+            "use_SUSAN": true,
+            "binning": 2,
+            "threshold":0.75
+        },
+        "DynamoAlignmentProject": {
+            "classes": 1,
+            "iterations": 1,
+            "use_noise_classes": false,
+            "swap_particles": false,
+            "use_symmetrie": false,
+            "selected_classes": [1,2],
+            "as_boxes": true,
+            "use_SUSAN": true,
+            "binning": 1,
+            "threshold":0.75
+        }
+    }
+```
 
 # Executing the Workflow
 
@@ -352,7 +295,7 @@ which are described further in the follwoing chapters.
 
 To execute the workflow you just need to type:
 
-`   tomoBEAR local /path/to/project.json /path/to/defaults.json`
+`   tomoBEAR local /path/to/project.json /path/to/defaults.json`
 
 ## SLURM Execution
 
@@ -373,7 +316,7 @@ to set the value for the key "slurm_node_list".
 
 To execute the workflow you just need to type:
 
-`   tomoBEAR slurm /path/to/project.json /path/to/defaults.json`
+`   tomoBEAR slurm /path/to/project.json /path/to/defaults.json`
 
 ## Cleanup
 
@@ -402,4 +345,4 @@ Files that are kept are
 
 all other files are removed.
 
-`   tomoBEAR cleanup /path/to/project.json /path/to/defaults.json`
+`   tomoBEAR cleanup /path/to/project.json /path/to/defaults.json`
