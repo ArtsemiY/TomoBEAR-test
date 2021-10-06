@@ -131,6 +131,8 @@ This segment performs estimation of defocus using GCTF (GCTFCtfphaseflipCTFCorre
 
 Then binned aligned ctf-corrected stacks are produced by BinStacks{} and tomographic reconstructions are generated for the binnnings specified in the general segment. In this example the particles are picked using template matching. First a template from EMDB is produced at a proper voxel side, then DynamoTemplateMatching{} creates cross-correlation volumes which can be inspected. Finally, highest cross-correlation peaks, over 2.5 standard deviations above the mean value in the CC volume are set for extraction to 3D particle files, the coordinates are stored in the particle_table files in the dynamo format. 
 
+In the section below you will find subtomogram classification projects that should produce you a reasonable structure. They first use multi-reference alignment projects with "noise traps" to first classify out false-positive particles produced by template matching, this happens at the binning which was used for template matching. In the end of the segment you should have a reasonable set of particles in the best class. 
+
 ```json
     "DynamoAlignmentProject": {
         "iterations": 3,
@@ -178,6 +180,8 @@ Then binned aligned ctf-corrected stacks are produced by BinStacks{} and tomogra
     "StopPipeline": {
     }
 ```
+
+After that you will need to process tomograms at lower binning in order to reduce the voxel size. This is done in the extension of the JSON file below, however automated workflow is finished here as the user needs to play with the masks, particle sets, etc. 
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
 
