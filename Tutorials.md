@@ -4,7 +4,7 @@ This page contains tomoBEAR tutorials which should showcase the capabilities of 
 
 As a first data set to showcase the capabilities of tomoBEAR we have chosen the Ribosome data set with the number 10064 in the EMPIAR database.
 
-You can get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10064/). In our case we used just the mixedCTEM data and achieved 11.2Å in resolution with ~3.5k particles. If you want you can additionally use the CTEM data to be able to pick more particles.
+You can get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10064/). In our case we used just the mixedCTEM data and achieved 11.2Å in resolution with ~3.5k particles which is similar to the resolution achieved by the original researchers. If you want you can additionally use the CTEM data to be able to pick even more particles.
 
 After downloading the data extract it in a folder of your choice. One thing one should note about this data is that
 
@@ -325,4 +325,15 @@ Here comes the full JSON file to setup the processing pipeline in tomoBEAR and p
 
 # HIV1 (EMPIAR-10164)
 
-First you need to get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10164/).
+As the second data set to showcase the capabilities of tomoBEAR we have chosen the HIV-1 data set with the number 10164 in the EMPIAR database.
+
+You can get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10164/). In our case we used just the mixedCTEM data and achieved 11.2Å in resolution with ~3.5k particles which is similar to the resolution achieved by the original researchers. If you want you can additionally use the CTEM data to be able to pick even more particles.
+
+After downloading the data extract it in a folder of your choice. One thing one should note about this data is that
+
+    the data is already motion corrected
+    the stacks are already assembled
+    the pixel size is not in the header
+    the tilt angles are not provided
+
+Because of such circumstances which sometimes occur tomoBEAR is able to inject this data along with the JSON which describes the processing pipeline.
