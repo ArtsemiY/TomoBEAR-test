@@ -327,13 +327,14 @@ Here comes the full JSON file to setup the processing pipeline in tomoBEAR and p
 
 As the second data set to showcase the capabilities of tomoBEAR we have chosen the HIV-1 data set with the number 10164 in the EMPIAR database.
 
-You can get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10164/). In our case we used just the mixedCTEM data and achieved 11.2Å in resolution with ~3.5k particles which is similar to the resolution achieved by the original researchers. If you want you can additionally use the CTEM data to be able to pick even more particles.
+You can get the data set from [here](https://www.ebi.ac.uk/empiar/EMPIAR-10164/). In our case we use just the tomograms with the numbers 1, 3, 26, 28, 37 of the data and achieve 5.4Å in resolution with ~15.5k particles which is by now 1Å less than the resolution achieved by the original researchers.
 
-After downloading the data extract it in a folder of your choice. One thing one should note about this data is that
+After downloading the data extract it in a folder of your choice. One thing one should note about this data is that it is raw data. It is in the original form you acquire it from the microscope by SerialEM.
 
-    the data is already motion corrected
-    the stacks are already assembled
-    the pixel size is not in the header
-    the tilt angles are not provided
+Following processing steps need to be applied to get tomograms
 
-Because of such circumstances which sometimes occur tomoBEAR is able to inject this data along with the JSON which describes the processing pipeline.
+* the data needs to be motion corrected
+* the tilt stacks need to be assembled assembled
+* the tilt stacks need to be aligned
+* the tomograms need to be reconstructed
+
