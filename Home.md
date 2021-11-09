@@ -2,7 +2,7 @@ Welcome to the tomoBEAR wiki!
 
 TomoBEAR a software package specialized for cryo electron tomography and subtomogram averaging based on Matlab. TomoBEAR implements **B**asics for **E**lectron tomography and **A**utomated **R**econstruction from cryo electron tomography data. With tomoBEAR you can easily process tomographic data from the raw tilt stacks which are acquired by an electron microscope to the biological structure of interest.
 
-Currently we are at the stage of alpha testing, we will be happy if you try it, we will help you to get going. Please write to Nikita Balyschew (nibalysc@biophys.mpg.de) if you have problems.
+Currently we are at the stage of alpha testing, we will be happy if you try it, we will help you to get going. Please write to [Nikita Balyschew](mailto:nikita.balyschew@googlemail.com?subject=[GitHub]%20TomoBEAR) if you have problems.
 
 TomoBEAR is designed to operate on a data set in parallel where it is possible and that the user has minimal intervention and doesn't need to learn all the different software packages (MotionCor2, IMOD, Gctf, Dynamo) to be able to process cryo electron tomography data. We tried to come up with a set of predefined defaults which should fit many projects in the cryo electron tomography regime. However if some parameters need to be tweaked for specific projects to achieve best results you are free to do so.
 
