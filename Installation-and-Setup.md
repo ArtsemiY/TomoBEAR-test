@@ -83,6 +83,16 @@ Change to the directory where the files were extracted and run the installation 
 
 * `./install`
 
+When the installation is finished remember the install path of the MCR as it needs to be insert in the `defaults.json` configuration file in the `general` section as shown below
+
+```json
+"general":{
+...
+    "mcr_location": "/path/to/MCR/v9xx"
+...
+}
+```
+
 ## Additional Software
 
 As tomoBEAR is also wrapping standardized tools to fulfill some of the processing steps these need to be installed and executable. The advantage of such an Best of Breed approach is that you can profit of developments in algorithms in these tools and you can use them in the pipeline without any changes to the code at best.
