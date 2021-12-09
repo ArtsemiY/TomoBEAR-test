@@ -1,4 +1,4 @@
-Welcome to the tomoBEAR wiki!
+Welcome to the TomoBEAR wiki!
 
 TomoBEAR a software package specialized for cryo electron tomography and subtomogram averaging based on Matlab. TomoBEAR implements **B**asics for **E**lectron tomography and **A**utomated **R**econstruction from cryo electron tomography data. With tomoBEAR you can easily process tomographic data from the raw tilt stacks which are acquired by an electron microscope to the biological structure of interest.
 
