@@ -89,6 +89,16 @@ When the installation is finished remember the install path of the MCR as it nee
 }
 ```
 
+Find also the variable named `pipeline_location` in the `general` section in the `defaults.json` file and set it to the path where you have TomoBEAR cloned. 
+
+```json
+"general":{
+...
+    "pipeline_location": "/path/to/TomoBEAR"
+...
+}
+```
+
 ## Additional Software
 
 As tomoBEAR is also wrapping standardized tools to fulfill some of the processing steps these need to be installed and executable. The advantage of such an Best of Breed approach is that you can profit of developments in algorithms in these tools and you can use them in the pipeline without any changes to the code at best.
