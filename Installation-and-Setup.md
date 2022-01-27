@@ -170,6 +170,10 @@ Head to the
 [IMOD](https://bio3d.colorado.edu/ftp/latestIMOD/RHEL7-64_CUDA8.0)
 download page and get the IMOD version 4.10.42 or earlier.
 
+#### SUSAN
+
+To install and use SUSAN follow the instructions in the [SUSAN](https://github.com/rkms86/SUSAN) code repository.
+
 #### Software Installation
 
 Please follow the instructions for all the software packages you
@@ -198,3 +202,5 @@ ones installed.
 If you install IMOD the normal way then IMOD should be already in your
 `PATH` variable and therefore callable from everywhere. This is the only
 way supported by tomoBEAR.
+
+
