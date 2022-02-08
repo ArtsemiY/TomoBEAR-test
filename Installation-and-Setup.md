@@ -174,6 +174,10 @@ download page and get the IMOD version 4.10.42 or earlier.
 
 To install and use SUSAN follow the instructions in the [SUSAN](https://github.com/rkms86/SUSAN) code repository.
 
+#### Anaconda
+
+TomoBEAR can use various python based techniques to extend its functionality like using a neural net based picker or a neural net based denoising algorithm. For that it assumes you have Anaconda or Miniconda installed. For that either use your OS included package manager or install it from the [Anaconda](https://www.anaconda.com/products/individual) web page. You can also take the miniconda installation to save on space and inodes.
+
 #### CryoCARE
 
 CryoCARE is a neural net based denoising framework based on convolutional neural nets and the u-net architecture which can learn to denoise cryo images. With TomoBEAR it is possible to denoise tomograms with the help of CryoCARE. To be able to do so it needs to be installed. For that please clone the [CryoCARE](https://github.com/juglab/cryoCARE_pip) implementation from [juglab](https://github.com/juglab) and follow the instructions on their page.
