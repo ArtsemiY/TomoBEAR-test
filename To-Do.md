@@ -12,7 +12,7 @@ The CryoCARE module is a neural net based denoising framework. Beacuse it is a p
 
 # Template Matching
 
-Chose binning for template matching 
+Chose a binning level for template matching based on heuristics. If the GPU memory and performance grows further in the future it can be thought of incorporating this into the heuristics for chosing the proper binning level.
 
 # Stack Binning
 
