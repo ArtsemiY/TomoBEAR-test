@@ -17,3 +17,7 @@ Chose binning for template matching
 # Stack Binning
 
 The process to generate binned stacks can be for some users confusing as you need to know when to generate them to save storage in the beginning of processing, at which binnings they need to be generated and what operations should be applied on them e.g. CTF correction or denoising.
+
+# GUI
+
+A web-based GUI will prove advantageous for workflow visualization and analysis of intermediate processing steps.
