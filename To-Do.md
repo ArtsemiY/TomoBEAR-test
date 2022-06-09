@@ -1,4 +1,4 @@
-This page contains a collection of useful ideas and improvements to further facilitate processing.
+This page contains a collection of useful ideas and improvements to further facilitate processing. Please send us your ideas to mikhail.kudryashev at mdc-berlin.de
 
 # Mdoc-Files
 
