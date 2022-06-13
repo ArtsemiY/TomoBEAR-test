@@ -23,7 +23,7 @@ You need enough storage to store your data and all the intermediate data and res
 
 # Setup
 
-There are two ways to operate tomoBEAR. 
+There are two ways to operate tomoBEAR.
 
 * The first way is to use it directly from MATLAB
 * The second way is to use a standalone executable which is available precompiled or can be compiled on your own
@@ -34,11 +34,13 @@ For both methods of operation you have to install the additional software mentio
 
 If you want to run on a local machine then it is advised to run tomoBEAR from within MATLAB. This way you also don't need to download and install the MATLAB Compiled Runtime (MCR) if it is not already installed in your facility.
 
-Everything you need to get tomoBEAR on your machine is to change to some folder where you want to have tomoBEAR and execute the following command 
+It is adviced to use the following MATLAB release under which the software was tested: MATLAB R2021a.
 
-* `git clone https://github.com/KudryashevLab/tomoBEAR.git`. 
+Everything you need to get tomoBEAR on your machine is to change to some folder where you want to have tomoBEAR and execute the following command
 
-After that change to the folder tomoBEAR with 
+* `git clone https://github.com/KudryashevLab/tomoBEAR.git`.
+
+After that change to the folder tomoBEAR with
 
 * `cd tomoBEAR`
 
@@ -89,7 +91,7 @@ When the installation is finished remember the install path of the MCR as it nee
 }
 ```
 
-Find also the variable named `pipeline_location` in the `general` section in the `defaults.json` file and set it to the path where you have TomoBEAR cloned. 
+Find also the variable named `pipeline_location` in the `general` section in the `defaults.json` file and set it to the path where you have TomoBEAR cloned.
 
 ```json
 "general":{
@@ -103,13 +105,13 @@ Find also the variable named `pipeline_location` in the `general` section in the
 
 As tomoBEAR is also wrapping standardized tools to fulfill some of the processing steps these need to be installed and executable. The advantage of such an Best of Breed approach is that you can profit of developments in algorithms in these tools and you can use them in the pipeline without any changes to the code at best.
 
-### Module System 
+### Module System
 
 If you are working in a cryo electron microscopy facility and employ a cluster with a module system where all the needed software is already deployed as modules it is fairly easy to setup tomoBEAR. If not all the software packages are available as modules you have two possibilities.
 
 1. The first and probably the easiest possibility for inexperienced users is to ask the administrator or some responsible person for the module system to introduce the needed software as modules
 
-2. The second and probably faster possibility is to install the software on your own in your home folder if you don't have root permissions and put it your PATH variable or adjust the defaults.json so that the variables to tools contain the full path. 
+2. The second and probably faster possibility is to install the software on your own in your home folder if you don't have root permissions and put it your PATH variable or adjust the defaults.json so that the variables to tools contain the full path.
 
 If all the software is available as modules you need to head to the `defults.json` file and find the entry `"modules": []` just replace it with `"modules": ["IMOD_module", "Gctf_module", "MotionCor2_module", "CUDA_module_1", "CUDA_module_2"]`. Be aware that these module names are just placeholders for your real module names. you can find them out with the command `module available` or the shortcut `module avail`.
 
@@ -117,11 +119,11 @@ As for the other software packages you can add the required CUDA versions also t
 
 ### Manual Installation
 
-The easiest way for the manual installation is to add the repositories with CUDA to your specific OS package manager. That is yum in CentOS and apt or apt-get in Ubuntu. The other way is a manual installation from the executables which are available from the [NVIDIA homepage](https://developer.nvidia.com/cuda-toolkit-archive). 
+The easiest way for the manual installation is to add the repositories with CUDA to your specific OS package manager. That is yum in CentOS and apt or apt-get in Ubuntu. The other way is a manual installation from the executables which are available from the [NVIDIA homepage](https://developer.nvidia.com/cuda-toolkit-archive).
 
 #### CUDA
 
-For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed. 
+For all the additional software packages the proper CUDA toolkits with the newest driver for your graphics card need to be installed.
 
 To install CUDA you can use the package manager of your OS install it manually or just use the module system of your facility if you employ one.
 
@@ -133,7 +135,7 @@ You need to repeat the steps multiple times until you have all the needed CUDA v
 
 ##### Ubuntu 21.04
 
-To get the newest CUDA on an Ubuntu system the easiest way is to install it via graphic
+To get the newest CUDA on an Ubuntu system the easiest way is to install it via graphical interface using *Software & Updates* (see tab *Additional Drivers*).
 
 #### Dynamo
 
@@ -212,5 +214,3 @@ ones installed.
 If you install IMOD the normal way then IMOD should be already in your
 `PATH` variable and therefore callable from everywhere. This is the only
 way supported by tomoBEAR.
-
-
