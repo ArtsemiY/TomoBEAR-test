@@ -19,7 +19,7 @@ If you have already cloned the [tomoBEAR github repository](https://github.com/K
 
 The following paragraphs will explain the variables contained in the JSON file and the needed changes to be able to run tomoBEAR on your local machine. In the end of this chapter the whole JSON file is shown.
 
-First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder. This must be done in the general section of the `json` file. 
+First of all and most importantly you need to show tomoBEAR the path to the data and the processing folder. This must be done in the general section of the `json` file.
 ```json
     "general": {
         "project_name": "Ribosome",
@@ -29,6 +29,7 @@ First of all and most importantly you need to show tomoBEAR the path to the data
         "expected_symmetrie": "C1",
         "apix": 2.62,
         "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],
+        "rotation_tilt_axis":-5,
         "gold_bead_size_in_nm": 9,
         "template_matching_binning": 8,
         "binnings": [2, 4, 8],
@@ -127,11 +128,11 @@ or if you are using a compiled version of tomoBEAR and have everything set up pr
     },
 ```
 
-This segment performs estimation of defocus using GCTF (`"GCTFCtfphaseflipCTFCorrection": {}`). You can inspect the quality of fitting by going into the folder `6_BatchRunTomo_1` and typing `imod tomogram_xxx/slices/*.ctf` and making sure that the Thon rings match the estimation. If not - play with the parameters of the `GCTFCtfphaseflipCTFCorrection` module. 
+This segment performs estimation of defocus using GCTF (`"GCTFCtfphaseflipCTFCorrection": {}`). You can inspect the quality of fitting by going into the folder `6_BatchRunTomo_1` and typing `imod tomogram_xxx/slices/*.ctf` and making sure that the Thon rings match the estimation. If not - play with the parameters of the `GCTFCtfphaseflipCTFCorrection` module.
 
-Then binned aligned ctf-corrected stacks are produced by `"BinStacks": {}` and tomographic reconstructions are generated for the binnings specified in the general segment. In this example the particles are picked using template matching. First a template from EMDB is produced at a proper voxel size, then `"DynamoTemplateMatching": {}` creates cross-correlation volumes which can be inspected. Finally, highest cross-correlation peaks, over 2.5 standard deviations above the mean value in the CC volume are selected for extraction to 3D particle files, the initial coordinates are stored in the `particles_table` folder as a file in the dynamo table format. 
+Then binned aligned ctf-corrected stacks are produced by `"BinStacks": {}` and tomographic reconstructions are generated for the binnings specified in the general segment. In this example the particles are picked using template matching. First a template from EMDB is produced at a proper voxel size, then `"DynamoTemplateMatching": {}` creates cross-correlation volumes which can be inspected. Finally, highest cross-correlation peaks, over 2.5 standard deviations above the mean value in the CC volume are selected for extraction to 3D particle files, the initial coordinates are stored in the `particles_table` folder as a file in the dynamo table format.
 
-In the section below you will find subtomogram classification projects that should produce you a reasonable structure. They first use multi-reference alignment projects with a true class and so called noise trap classes to first classify out false-positive particles produced by template matching, this happens at the binning which was used for template matching. In the end of the segment you should have a reasonable set of particles in the best class. 
+In the section below you will find subtomogram classification projects that should produce you a reasonable structure. They first use multi-reference alignment projects with a true class and so called noise trap classes to first classify out false-positive particles produced by template matching, this happens at the binning which was used for template matching. In the end of the segment you should have a reasonable set of particles in the best class.
 
 ```json
     "DynamoAlignmentProject": {
@@ -181,7 +182,7 @@ In the section below you will find subtomogram classification projects that shou
     }
 ```
 
-After that you will need to process tomograms at lower binning in order to reduce the voxel size. This is done in the extension of the JSON file below, however automated workflow is finished here as the user needs to play with the masks, particle sets, etc. 
+After that you will need to process tomograms at lower binning in order to reduce the voxel size. This is done in the extension of the JSON file below, however automated workflow is finished here as the user needs to play with the masks, particle sets, etc.
 
 Here comes the full JSON file to setup the processing pipeline in tomoBEAR and process the data
 
@@ -195,6 +196,7 @@ Here comes the full JSON file to setup the processing pipeline in tomoBEAR and p
         "expected_symmetrie": "C1",
         "apix": 2.62,
         "tilt_angles": [-60.0, -58.0, -56.0, -54.0, -52.0, -50.0, -48.0, -46.0, -44.0, -42.0, -40.0, -38.0, -36.0, -34.0, -32.0, -30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 42.0, 44.0, 46.0, 48.0, 50.0, 52.0, 54.0, 56.0],
+        "rotation_tilt_axis":-5,
         "gold_bead_size_in_nm": 9,
         "template_matching_binning": 8,
         "binnings": [2, 4, 8],
@@ -337,4 +339,3 @@ Following processing steps need to be applied to get tomograms
 * the tilt stacks need to be assembled assembled
 * the tilt stacks need to be aligned
 * the tomograms need to be reconstructed
-
