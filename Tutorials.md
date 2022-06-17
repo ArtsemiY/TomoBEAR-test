@@ -256,7 +256,7 @@ You also need to use a mask to filter averages for FSC calculation, and the accu
 
 After that you should get a similar FSC curve to the following one:
 
-![Ribosome EMPIAR-10064 FSC](https://raw.githubusercontent.com/KudryashevLab/TomoBEAR/main/images/ribosome_empiar_10064_fsc.png)
+![Ribosome EMPIAR-10064 FSC](https://raw.githubusercontent.com/KudryashevLab/TomoBEAR/main/images/ribosome_empiar_10064_fsc.jpg)
 
 where in Red we added a so-called "gold-standard" criterion of `FSC = 0.143` to estimate the final map resolution, which in our case for the final set of ~4k ribosome particles reached 11.25Å.
 
