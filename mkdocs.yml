@@ -1,6 +1,24 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
-site_name: My Docs
+site_name: TomoBEAR wiki
 
 theme:
   name: material
+  features:
+    - navigation.indexes
+
+nav:
+  - Home: home.md
+  - Getting started:
+    - TomoBEAR structure: getting_started/tomobear-structure.md
+    - Installation and setup: getting_started/installation-and-setup.md
+    - Quick start guide: getting_started/quick-start-guide.md
+    - Frequently asked questions: getting_started/frequently-asked-questions.md
+  - Usage:
+    - Tutorials: usage/tutorials.md
+    - Usage examples: usage/usage-examples.md
+    - Execution Environments: usage/execution-environments.md
+  - Modules:
+    - Modules overview: modules/modules-overview.md
+    - CreateStacks: modules/create-stacks.md
+    - Old modules description: modules/modules.md
