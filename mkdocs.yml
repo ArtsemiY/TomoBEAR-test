@@ -5,8 +5,41 @@ site_name: TomoBEAR wiki
 theme:
   name: material
   features:
-    - navigation.indexes
+    # use tabs as a navugation system
+    - navigation.tabs
+    # add "back to top" button
+    - navigation.top
+  icon:
+    # choice of icon in the page header
+    repo: fontawesome/brands/github
+  palette:
+    # palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
+
+
+
+# link to the repo in the page header
+repo_url: https://github.com/KudryashevLab/TomoBEAR
+repo_name: KudryashevLab/TomoBEAR
+
+# link to the repo and choice of the icon in the page footer
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KudryashevLab/TomoBEAR
+
+# wiki structure
 nav:
   - Home: home.md
   - Getting started:
@@ -20,5 +53,22 @@ nav:
     - Execution Environments: usage/execution-environments.md
   - Modules:
     - Modules overview: modules/modules-overview.md
-    - CreateStacks: modules/create-stacks.md
-    - Old modules description: modules/modules.md
+    - Special modules: modules/special-modules.md
+    - Preprocessing & reconstruction:
+      - Overview: modules/preprocessing-and-reconstruction.md
+      - CreateStacks: modules/preprocessing_and_reconstruction/create-stacks.md
+    - Sub-tomogram averaging:
+      - Overview: modules/subtomogram-averaging.md
+      - DynamoAlignmentProject: modules/subtomogram_averaging/dynamo-alignment-project.md
+    - Old modules description: modules/old-modules.md
+  - Contributing:
+    - Report/fix bug: contributing/report-or-fix-bug.md
+    - Suggest a new module: contributing/contribute-module.md
+    - To-do's: contributing/to-do.md
+  - About TomoBEAR & us:
+    - KudryashevLab: about/kudryashev-lab.md
+    - Authors & contributions: about/authors-and-contributions.md
+    - Publications & citations: about/publications-and-citations.md
+  - References:
+    - Embedded software: references/embedded-software.md
+    - Included algorithms: references/included-algorithms.md
