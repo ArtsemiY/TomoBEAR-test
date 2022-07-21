@@ -26,8 +26,12 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-
-
+# enables admonitions, allows to make them collapsible
+# and to nest arbitrary content inside admonitions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 # link to the repo in the page header
 repo_url: https://github.com/KudryashevLab/TomoBEAR
