@@ -32,6 +32,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 # link to the repo in the page header
 repo_url: https://github.com/KudryashevLab/TomoBEAR

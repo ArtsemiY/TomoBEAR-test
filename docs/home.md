@@ -66,6 +66,7 @@ Once cloned, you may follow [instructions on installation and setup](http://127.
 
 ## Participating
 We are highly appreciate your efforts to contribute to the TomoBEAR!
+
 Please report bugs and suggest features using [Issue tracker](https://github.com/KudryashevLab/TomoBEAR/issues).
 
 ## Contacts
