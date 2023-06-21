@@ -25,8 +25,8 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "Wiki mirror"
-          cp $GITHUB_WORKSPACE/TomoBEAR/docs/*.md $GITHUB_WORKSPACE/TomoBEAR.wiki
-          cd $GITHUB_WORKSPACE/TomoBEAR.wiki
+          cp $GITHUB_WORKSPACE/TomoBEAR-wiki/docs/*.md $GITHUB_WORKSPACE/TomoBEAR-wiki.wiki
+          cd $GITHUB_WORKSPACE/TomoBEAR-wiki.wiki
           git add .
           # only commit if there are changes
           git diff-index --quiet HEAD -- || git commit -m "sync from wiki/"
