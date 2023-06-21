@@ -15,7 +15,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
-          path: TomoBEAR
+          path: TomoBEAR-test
       - name: Checkout wiki
         uses: actions/checkout@v3
         with:
