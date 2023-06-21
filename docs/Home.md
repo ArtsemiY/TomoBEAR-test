@@ -1,6 +1,6 @@
 # Welcome to the TomoBEAR wiki!
 
-![TomoBEAR Social Media Logo Image](/images/TomoBEAR_gitlogo.png)
+![TomoBEAR Social Media Logo Image](https://github.com/KudryashevLab/TomoBEAR/blob/main/images/TomoBEAR_gitlogo.png)
 
 <u>**B**</u>asics for cryo-<u>**E**</u>lectron <u>**tomo**</u>graphy and <u>**A**</u>utomated <u>**R**</u>econstruction (**TomoBEAR**) is a configurable and customizable open-source MATLAB software package developed for automated large-scale parallelized cryo-electron tomography (cryo-ET) data processing.
 
@@ -16,7 +16,7 @@
 - [Available modules description, their parameters and default values](https://github.com/KudryashevLab/TomoBEAR/wiki/Modules)
 - [Usage cases and tips](https://github.com/KudryashevLab/TomoBEAR/wiki/Usage)
 - [Troubleshooting tips](https://github.com/KudryashevLab/TomoBEAR/wiki/Troubleshooting)
-- [List of external software to be cited](https://github.com/KudryashevLab/TomoBEAR/wiki/Additional-Software-Citation)
+- [External software (installation, configuration, citation)](https://github.com/KudryashevLab/TomoBEAR/wiki/External-Software)
 
 
 ## Gerenal description
@@ -66,6 +66,6 @@ Since number of **TomoBEAR** parameters is huge, to help users cope with that we
 ## Pipeline structure
 In the following picture you can see a flow chart which visualizes pipeline steps which `TomoBEAR` can execute in an automated and parallel manner.
 
-![Schematic Pipeline Image](/images/pipeline_light_mode.svg)
+![Schematic Pipeline Image](https://github.com/KudryashevLab/TomoBEAR/blob/main/images/pipeline_light_mode.svg)
 
 Orange processing steps in the flow chart are mandatory and must be executed by TomoBEAR. Yellow boxes are optional and can be activated if desired.

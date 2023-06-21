@@ -1,8 +1,14 @@
 # TomoBEAR Configuration
 
-If you followed the [installation instructions](https://github.com/KudryashevLab/TomoBEAR/wiki/Installation-and-Setup) thoroughly then you should have a
-working copy of the TomoBEAR. Now you need to generate a JSON file for your
-project to start to process your acquired cryo-ET data.
+If you followed the [installation instructions](https://github.com/KudryashevLab/TomoBEAR/wiki/Installation-and-Setup) thoroughly then you should have a working copy of the TomoBEAR. Now you need to generate a JSON file for your project to start to process your acquired cryo-ET data.
+
+## Contents
+
+- [Data entry](#data-entry)
+- [JSON configuration templates](#json-configuration-templates)
+- [Particles generation options](#particles-generation-options)
+- [Live data processing](#live-data-processing)
+- [Executing the workflow](#executing-the-workflow)
 
 ## Data entry
 
@@ -74,7 +80,7 @@ where the parameters are the following:
 * ```eer_exposure_per_fraction```: total electron dose accumulated per frame (group of fractions).
 These parameters relate to the corresponding MotionCor2 parameters such as ```–EerSampling``` and three parameter values denoted in the file passed to ```–FmIntFile``` option, namely - total number of fractions (1st column), number of fractions in group (2nd column) and total accumulated dose per group (3rd column).
 
-## JSON Configuration Templates
+## JSON configuration templates
 
 ### Raw Tomography Data with Fiducials
 
@@ -844,13 +850,11 @@ In order to improve contrast in reconstructions we would recommend to enable `"g
 
 If you start collection from zero-tilt, to avoid problems of files perception and sorting caused by `-0.0`/`+0.0` appearing as the angle for untilted views (due to small initial tilting offset being present) instead of expected `0.0` it is also recommended to add `"first_tilt_angle": 0` to `general` section of your input JSON file.
 
-# Executing the Workflow
+## Executing the workflow
 
-After you have generated an apropriate json file for your project you
-may start the processing. There are several different execution strategies
-which are described further in the following chapters.
+After you have generated an appropriate JSON file for your project you may start the processing. There are several different execution strategies which are described further in the following chapters.
 
-## Local Execution (Offline)
+### Local Execution (Offline)
 
 To execute the workflow, you need to start MATLAB from the TomoBEAR cloned code folder using
 
@@ -872,7 +876,7 @@ To run a workflow using a standalone TomoBEAR version, you need to go into the T
 
 This action assumes you have already configured everything according to the section [[ Standalone (Installation and Setup) | https://github.com/KudryashevLab/TomoBEAR/wiki/Installation-and-Setup#standalone ]].
 
-## Local Execution (Live)
+### Local Execution (Live)
 **This is an experimental feature which is currently available only in development version under `develop_live` branch. Note that other `TomoBEAR` functionality in that brunch may differ from `main`.**
 
 To start `TomoBEAR` execution in live mode user need to type in the MATLAB command window:
@@ -880,7 +884,7 @@ To start `TomoBEAR` execution in live mode user need to type in the MATLAB comma
     runTomoBear("local_live", "/path/to/input.json", "/path/to/defaults.json")
 ```
 
-## SLURM Execution
+### SLURM Execution
 
 For the execution of the workflow on a cluster you need to adjust the
 following keys in the general section:
@@ -910,8 +914,8 @@ Or type the following command in the command window of MATLAB if you are using t
 ```
 
 
-## Cleanup
-### Since 24-Nov-2022
+### Cleanup
+#### Since 24-Nov-2022
 
 To delete intermediate files in the `TomoBEAR` project folder you may use one of the following clean-up modes:
 - `cleanup` - in this case intermediate files will be deleted **only for those** processing steps where is used flag `"keep_intermediates": false`;
@@ -928,7 +932,7 @@ If `"keep_intermediates": false` is used for some step, the corresponding files 
 
 If user utilizes `cleanup_all` mode, deletion of all provided above files and folders may already save up to 30% of space initially occupied by the project folder.
 
-#### Example 1
+##### Example 1
 Let's consider you want to perform cleanup **only for** intermediate files associated with the step **MotionCor2** (i.e. delete files-folders listed in line 1 in the table above). Corresponding example of the JSON file for that cleanup setup is provided below:
 
 ```json
@@ -993,7 +997,7 @@ or in the shell using the following command:
     ./run_tomoBEAR.sh cleanup /path/to/project.json /path/to/defaults.json
 ```
 
-#### Example 2
+##### Example 2
 Let's consider you want to perform cleanup **for all** intermediate files **except for** those which are associated with the step **GCTFCtfphaseflipCTFCorrection** (i.e. delete files/folders listed in lines 1-3 in the table above). Corresponding example of the JSON file for that cleanup setup is provided below:
 
 
@@ -1059,7 +1063,7 @@ or in the shell using the following command:
     ./run_tomoBEAR.sh cleanup_all /path/to/project.json /path/to/defaults.json
 ```
 
-### Before 24-Nov-2022
+#### Before 24-Nov-2022
 
 If the later described **keep_intermediates** flag is set during the
 processing of a project to true you can cleanup the not needed

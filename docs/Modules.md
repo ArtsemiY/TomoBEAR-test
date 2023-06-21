@@ -4,11 +4,40 @@ and their parameters which can be setup in the JSON configuration file in their
 corresponding blocks.
 
 ## Contents
+- [Modules dependency table](#modules-dependency-table)
 - [Global parameters configuration](#global-parameters-configuration)
 - [Pipeline behavior control modules](#pipeline-behavior-control-modules)
 - [CryoET data processing modules](#cryoet-data-processing-modules)
 - [Template matching-associated modules](#template-matching-associated-modules)
 - [Subtomogram Averaging modules](#subtomogram-averaging-modules)
+
+## Modules dependency table
+
+Here we provide a table of modules dependencies on the external software.
+
+| Module \ Tool  | IMOD | Dynamo | MotionCor2 | AreTomo | Gctf / CTFIND4 | IsoNet | crYOLO | SUSAN | Anaconda |
+| :------------- | :--- | :---- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| MetaData       | | | | | | | | | |
+| SortFiles      | | | | | | | | | |
+| MotionCor2     | :white_check_mark: | | :white_check_mark: | | | | | | |
+| GridEdgeEraser | | :white_check_mark: | | | | | | | |
+| CreateStacks   | :white_check_mark: | :white_check_mark: | | | | | | |
+| DynamoTiltSeriesAlignment | | :white_check_mark: | | | | | | | |
+| DynamoCleanStacks | :white_check_mark: | :white_check_mark: | | | | | | |
+| AreTomo        | :white_check_mark: | | | :white_check_mark: | | | | | |
+| BatchRunTomo   | :white_check_mark: | | | | | | | | | |
+| GCTFCtfphaseflipCTFCorrection | :white_check_mark: | | | | :white_check_mark: | | | | |
+| BinStacks      | :white_check_mark: | | | | | | | | |
+| Reconstruct    | :white_check_mark: | | | | | | | | |
+| IsoNet         | | | | | | :white_check_mark: | | | :white_check_mark: |
+| DynamoImportTomograms | | :white_check_mark: | | | | | | | |
+| EMDTemplateGeneration | | :white_check_mark: | | | | | | | |
+| TemplateGenerationFromFile | | :white_check_mark: | | | | | | | |
+| DynamoTemplateMatching | | :white_check_mark: | | | | | | | |
+| TemplateMatchingPostProcessing | | :white_check_mark: | | | | | | (:white_check_mark:) | |
+| crYOLO         | | | | | | | :white_check_mark: | | :white_check_mark: |
+| GenerateParticles | | :white_check_mark: | | | | | | (:white_check_mark:) | |
+| DynamoAlignmentProject | | :white_check_mark: | | | | | | (:white_check_mark:) | | 
 
 ## Global parameters configuration
 
