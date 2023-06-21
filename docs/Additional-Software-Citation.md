@@ -1,4 +1,5 @@
 # Additional Software Citations
+
 As ```TomoBEAR``` wraps different third-party software packages for different processing stages, these need to be properly cited, once used under ```TomoBEAR```. Please, note that by using these software packages you are assumed to read the corresponding license files and fully accept them.
 
 #### IMOD
