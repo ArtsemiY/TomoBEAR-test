@@ -1,62 +1,76 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: Issue Report
+description: File a bug or any other general issue
+title: "[ISSUE]: "
+labels: ["pending"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for helping us to improve TomoBEAR by filling out this bug report!
   - type: input
-    id: contact
+    id: tomobear-ver
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: TomoBEAR version
+      description: Which version of TomoBEAR package do you use? |
+      If you cloned it from other than *main* branch (e.g. *develop*) or used some specific commit, |
+      please execute `git log --pretty="%H - %cd" -n 1` in your cloned TomoBEAR source code folder and put its output in this field
+      placeholder: v0.4.0
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: tomobear-form
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
+      label: TomoBEAR distribution form
+      description: Which kind of TomoBEAR distribution form do you use?
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
+        - Full (interactive) MATLAB
+        - Standalone
+    validations:
+      required: true
+  - type: dropdown
+    id: computing-system
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Computing system
+      description: Which kind of computing system do you use?
+      multiple: true
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - Standalone GPU workstation
+        - HPC cluster (interactive computing node)
+        - HPC cluster (via scheduler submission)
+    validations:
+      required: true
+  - type: markdown
+    id: issue-description
+    attributes:
+      label: Issue description
+      description: Provide a clear description of what happend and what did you expect to happen.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: markdown
+    id: configs
+    attributes:
+      label: Input configuration (JSON) file
+      description: Please copy and paste your input configuration (JSON) file.
+      value: "```JSON Place the contents of the JSON file here ```"
+    validations:
+      required: true
+  - type: markdown
+    id: additional-info
+    attributes:
+      label: Additional info: general
+      description: Add any other context about the problem here (sequence of actions to reproduce, logs, toy/example data, additiona configurations, screenshots, links/references).
+  - type: input
+    id: gpu-info
+    attributes:
+      label: Additional info: GPU setup
+      description: If the problem might be related to the GPUs, |
+      please describe your GPU setup (amount/type/memory) and CUDA version(s) 
+      placeholder: 4 x NVIDIA Ampere A40-48GB; CUDA-11.5
+  - type: input
+    id: software-info
+    attributes:
+      label: Additional info: software versions
+      description: Give here list of software and their versions which may be related to the issue (e.g. MATLAB, IMOD, Dynamo, MotionCor2, AreTomo, Gctf, IsoNet, etc.)   
+      placeholder: MATLAB-2021a, IMOD-4.11.24; Gctf-v1.18; etc.
