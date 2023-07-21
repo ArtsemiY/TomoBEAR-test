@@ -63,8 +63,7 @@ body:
     id: gpu-info
     attributes:
       label: Additional GPU setup info 
-      description: If the problem might be related to the GPUs, |
-      please describe your GPU setup (amount/type/memory) and CUDA version(s) 
+      description: If the problem might be related to the GPUs, please describe your GPU setup (amount/type/memory) and CUDA version(s) 
       placeholder: 4 x NVIDIA Ampere A40-48GB; CUDA-11.5
   - type: input
     id: software-info
