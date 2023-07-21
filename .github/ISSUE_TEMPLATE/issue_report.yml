@@ -3,10 +3,6 @@ description: File a bug or any other general issue
 title: "[ISSUE]: "
 labels: ["pending"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for helping us to improve TomoBEAR by filling out this bug report!
   - type: input
     id: tomobear-ver
     attributes:
@@ -38,7 +34,7 @@ body:
         - HPC cluster (via scheduler submission)
     validations:
       required: true
-  - type: markdown
+  - type: textarea
     id: issue-description
     attributes:
       label: Issue description
@@ -46,7 +42,7 @@ body:
       placeholder: Tell us what you see!
     validations:
       required: true
-  - type: markdown
+  - type: textarea
     id: configs
     attributes:
       label: Input configuration (JSON) file
@@ -54,7 +50,7 @@ body:
       value: "```JSON Place the contents of the JSON file here ```"
     validations:
       required: true
-  - type: markdown
+  - type: textarea
     id: additional-info
     attributes:
       label: Additional general info
