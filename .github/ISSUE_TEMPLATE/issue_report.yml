@@ -11,9 +11,7 @@ body:
     id: tomobear-ver
     attributes:
       label: TomoBEAR version
-      description: Which version of TomoBEAR package do you use? |
-      If you cloned it from other than *main* branch (e.g. *develop*) or used some specific commit, |
-      please execute `git log --pretty="%H - %cd" -n 1` in your cloned TomoBEAR source code folder and put its output in this field
+      description: Which version of TomoBEAR package do you use? If you cloned specific branch or commit, please execute "git log --pretty="%H - %cd" -n 1" in your cloned TomoBEAR source code folder and put its output in this field
       placeholder: v0.4.0
     validations:
       required: true
