@@ -53,17 +53,17 @@ body:
   - type: textarea
     id: additional-info
     attributes:
-      label: (additional) general info
+      label: Additional info
       description: Add any other context about the problem here (actions to reproduce, log/error messages, example data, additional configurations, screenshots, links/references).
   - type: input
     id: gpu-info
     attributes:
-      label: Additional GPU setup 
+      label: GPU setup 
       description: If the problem might be related to the GPUs, please describe your GPU setup (amount/type/memory) and CUDA version(s) 
       placeholder: 4 x NVIDIA Ampere A40-48GB; CUDA-11.5
   - type: textarea
     id: software-info
     attributes:
-      label: Additional software versions info 
+      label: Software setup 
       description: Give here list of software and their versions (and other relevant info) which may be related to the issue (e.g. MATLAB, IMOD, Dynamo, MotionCor2, AreTomo, Gctf, IsoNet, etc.)   
       placeholder: MATLAB-2021a, IMOD-4.11.24; Gctf-v1.18; etc.
